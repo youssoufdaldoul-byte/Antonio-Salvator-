@@ -40,3 +40,15 @@ fixed fullscreen at z-index 0. Requires all-keyframe H.264 re-encode
 
 After generation: report **job_id + preview link**, then STOP. No further
 asset generation, no website build, until explicit approval.
+
+## Generation log (2026-07-06)
+
+- Master facade v1 (3/4 angle, Nano Banana Pro 2K 16:9):
+  job `cb60fcf1-7671-439e-a74f-53d2c58d171e` — superseded.
+- Master facade v2 (straight-on frontal, symmetrical, same identity — the
+  active `references/restaurant.png`): job `9d82b7a4-f68b-4b69-a177-e301f0820cdb`.
+- Hero video (Seedance 2.0, 16:9, 12 s, silent, start frame = facade v2):
+  job `03781270-8977-48c4-ac59-46049de2063b`.
+  - 1080p `std` mode returned 403 — "Pro or Ultimate plan required" on the
+    current Higgsfield plan; generated in `fast` mode at **720p** (allowed
+    fallback per brief). Re-render at 1080p possible after plan upgrade.
