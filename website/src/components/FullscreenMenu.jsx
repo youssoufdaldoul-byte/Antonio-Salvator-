@@ -6,12 +6,12 @@ import gsap from 'gsap'
 import { asset } from '../asset'
 
 const PREVIEWS = {
-  hero: { src: '/images/interior-hall.png', label: 'La salle' },
-  experience: { src: '/images/detail-table.png', label: 'La table' },
-  maison: { src: '/images/detail-bar.png', label: 'Le bar' },
-  menu: { src: '/images/dish-2.png', label: 'Les plats' },
-  ambiance: { src: '/images/terrace-night.png', label: 'La terrasse' },
-  reservation: { src: '/images/terrace-night.png', label: 'Votre table' },
+  hero: { src: '/images/interior-hall.webp', label: 'La salle' },
+  experience: { src: '/images/detail-table.webp', label: 'La table' },
+  maison: { src: '/images/detail-bar.webp', label: 'Le bar' },
+  menu: { src: '/images/dish-2.webp', label: 'Les plats' },
+  ambiance: { src: '/images/terrace-night.webp', label: 'La terrasse' },
+  reservation: { src: '/images/terrace-night.webp', label: 'Votre table' },
 }
 
 const IDS = ['hero', 'experience', 'maison', 'menu', 'ambiance', 'reservation']

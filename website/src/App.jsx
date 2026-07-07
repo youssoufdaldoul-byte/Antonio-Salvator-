@@ -1,6 +1,6 @@
 // MAISON LUMIÈRE — cinematic scroll-driven single page
 // Layers: 0 video · 1 tint · 2 grain/particles · 10 content (see styles.css)
-import { useRef, useState, useCallback } from 'react'
+import { useRef, useState, useCallback, useEffect } from 'react'
 import useScrollSystem from './hooks/useScrollSystem'
 import useReveals from './hooks/useReveals'
 import { t } from './i18n'
@@ -14,7 +14,9 @@ import Experience from './components/Experience'
 import Maison from './components/Maison'
 import MenuSection from './components/MenuSection'
 import Ambiance from './components/Ambiance'
+import Reviews from './components/Reviews'
 import Reservation from './components/Reservation'
+import Footer from './components/Footer'
 
 export default function App() {
   const videoRef = useRef(null)
@@ -24,6 +26,14 @@ export default function App() {
 
   useScrollSystem(videoRef)
   useReveals([lang])
+
+  // Keyboard accessibility: Escape closes the fullscreen menu.
+  useEffect(() => {
+    if (!menuOpen) return
+    const onKey = (e) => e.key === 'Escape' && setMenuOpen(false)
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [menuOpen])
 
   const scrollTo = useCallback((id) => {
     setMenuOpen(false)
@@ -56,7 +66,9 @@ export default function App() {
         <Maison tr={tr} />
         <MenuSection tr={tr} />
         <Ambiance tr={tr} />
-        <Reservation tr={tr} lang={lang} setLang={setLang} />
+        <Reservation tr={tr} />
+        <Reviews tr={tr} />
+        <Footer tr={tr} lang={lang} setLang={setLang} />
       </main>
     </>
   )

@@ -1,15 +1,31 @@
-// MAISON LUMIÈRE — premium dish card with 3D pop-out cutout (Section 4)
-// Desktop: perspective tilt + dish lift on hover. Mobile: pop-out
-// composition kept, tilt disabled.
-import { useRef, useState } from 'react'
+// MAISON LUMIÈRE — premium dish card (Section 4)
+// Visual priority: 360° rotation video (dishes-360/dish-N-360.mp4) →
+// transparent cutout PNG → honest placeholder. Desktop plays the rotation
+// on hover; touch devices soft-loop it. The dish floats above the card.
+import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { asset } from '../asset'
 
 export default function DishCard({ index, dish, cta }) {
   const cardRef = useRef(null)
+  const videoRef = useRef(null)
+  const [videoOk, setVideoOk] = useState(true)
   const [cutoutOk, setCutoutOk] = useState(true)
 
-  const finePointer = typeof window !== 'undefined' && window.matchMedia('(pointer: fine)').matches
+  const finePointer =
+    typeof window !== 'undefined' && window.matchMedia('(pointer: fine)').matches
+
+  // Touch devices: soft auto-loop once the video is ready.
+  useEffect(() => {
+    const v = videoRef.current
+    if (v && !finePointer && videoOk) {
+      v.play().catch(() => {})
+    }
+  }, [finePointer, videoOk])
+
+  const onEnter = () => {
+    if (finePointer && videoOk) videoRef.current?.play().catch(() => {})
+  }
 
   const onMove = (e) => {
     if (!finePointer) return
@@ -28,6 +44,7 @@ export default function DishCard({ index, dish, cta }) {
 
   const onLeave = () => {
     if (!finePointer) return
+    videoRef.current?.pause()
     gsap.to(cardRef.current, { rotateX: 0, rotateY: 0, duration: 1.0, ease: 'elastic.out(1, 0.55)' })
   }
 
@@ -35,11 +52,25 @@ export default function DishCard({ index, dish, cta }) {
     <article
       ref={cardRef}
       className="dish-card glass"
+      onMouseEnter={onEnter}
       onMouseMove={onMove}
       onMouseLeave={onLeave}
     >
       <span className="dish-card__backplate" aria-hidden="true" />
-      {cutoutOk ? (
+
+      {videoOk ? (
+        <video
+          ref={videoRef}
+          className="dish-card__cutout dish-card__video"
+          src={asset(`/dishes-360/dish-${index}-360.mp4`)}
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-label={`${dish.name} — rotation 360°`}
+          onError={() => setVideoOk(false)}
+        />
+      ) : cutoutOk ? (
         <img
           className="dish-card__cutout"
           src={asset(`/cutouts/dish-${index}-cutout.png`)}
@@ -48,12 +79,13 @@ export default function DishCard({ index, dish, cta }) {
           onError={() => setCutoutOk(false)}
         />
       ) : (
-        // Real cutout asset not present yet — show an honest elegant
-        // placeholder instead of faking the pop-out effect.
+        // Neither the 360° video nor the cutout asset is present yet —
+        // show an honest elegant placeholder instead of faking the effect.
         <div className="dish-card__cutout dish-card__cutout--missing" aria-hidden="true">
           plat {index}
         </div>
       )}
+
       <div className="dish-card__body">
         <h3 className="dish-card__name">{dish.name}</h3>
         <p className="dish-card__desc">{dish.desc}</p>

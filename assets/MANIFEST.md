@@ -59,3 +59,10 @@ cp assets/images/*.png website/public/images/
 for i in 1 2 3 4 5 6; do cp "assets/cutouts/dish-$i-cutout.png" "website/public/cutouts/"; done
 bash scripts/encode-scroll-video.sh   # writes website/public/bg.mp4
 ```
+
+## 360° rotations (Seedance 2.0, 1:1, 8 s, silent) → `website/public/dishes-360/`
+
+| Path | Job ID | File |
+|---|---|---|
+| `dishes-360/dish-1-360.mp4` — Foie gras | `5feea8a5-4c7d-4a15-97bb-32b6a2fa2092` | `hf_20260707_135611_5feea8a5-4c7d-4a15-97bb-32b6a2fa2092.mp4` |
+| `dishes-360/dish-2-360.mp4` … `dish-6-360.mp4` | **pending — Higgsfield workspace out of credits** (5 credits left on starter plan). Re-run after top-up with the same prompt/settings, start_image = dish job IDs above. |
