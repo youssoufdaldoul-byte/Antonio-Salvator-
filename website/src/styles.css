@@ -675,7 +675,8 @@ h1, h2, h3 {
 
 .dish-card {
   position: relative;
-  padding: clamp(4.6rem, 7vw, 6rem) 1.6rem 1.7rem;
+  /* top padding clears the floating dish so copy never sits under the plate */
+  padding: clamp(11rem, 17vw, 13.5rem) 1.6rem 1.7rem;
   transform-style: preserve-3d;
   will-change: transform;
   transition: border-color 0.6s var(--ease-out), box-shadow 0.6s var(--ease-out);
@@ -689,7 +690,7 @@ h1, h2, h3 {
   position: absolute;
   top: -3.4rem;
   left: 50%;
-  transform: translateX(-50%);
+  margin-left: -36%;
   width: 72%;
   aspect-ratio: 1;
   border-radius: 50%;
@@ -697,22 +698,44 @@ h1, h2, h3 {
   filter: blur(2px);
   pointer-events: none;
 }
-.dish-card__cutout {
+/* 3D pop-out composition: the dish floats over the card's top edge */
+.dish-pop {
   position: absolute;
-  top: -4.6rem;
+  top: -5.2rem;
   left: 50%;
-  width: 78%;
-  transform: translateX(-50%) translateZ(46px);
-  filter: drop-shadow(0 30px 34px rgba(0, 0, 0, 0.62));
-  transition: transform 0.7s var(--ease-out), filter 0.7s var(--ease-out);
+  width: 74%;
+  margin-left: -37%;
+  transform: translateZ(46px);
   pointer-events: none;
 }
-.dish-card:hover .dish-card__cutout {
-  transform: translateX(-50%) translateZ(64px) translateY(-10px) scale(1.05);
-  filter: drop-shadow(0 46px 44px rgba(0, 0, 0, 0.72));
+.dish-pop__glow {
+  position: absolute;
+  inset: -9%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(224, 164, 88, 0.0) 52%, rgba(224, 164, 88, 0.22) 66%, transparent 76%);
+  opacity: 0.7;
+  transition: opacity 0.7s var(--ease-out);
 }
-.dish-card__cutout--missing {
+.dish-card:hover .dish-pop__glow {
+  opacity: 1;
+}
+.dish-pop__media {
+  position: relative;
+  will-change: transform;
+}
+.dish-pop__img {
+  width: 100%;
   aspect-ratio: 1;
+}
+.dish-pop__img--round {
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid rgba(184, 151, 74, 0.4);
+  box-shadow:
+    inset 0 0 40px rgba(14, 14, 15, 0.5),
+    0 0 34px rgba(201, 119, 46, 0.18);
+}
+.dish-pop__img--missing {
   border-radius: 50%;
   border: 1px dashed rgba(184, 151, 74, 0.4);
   display: grid;
@@ -722,6 +745,42 @@ h1, h2, h3 {
   letter-spacing: 0.26em;
   text-transform: uppercase;
   background: radial-gradient(circle, rgba(32, 32, 29, 0.85), rgba(24, 22, 20, 0.65));
+}
+.dish-pop__shadow {
+  /* soft elliptical ground shadow that sells the float */
+  position: absolute;
+  left: 14%;
+  right: 14%;
+  bottom: -1.15rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.62) 0%, transparent 68%);
+  filter: blur(7px);
+  opacity: 0.5;
+  transform-origin: center;
+}
+/* mobile / touch: no tilt, gentle idle float keeps the dish alive */
+@media (pointer: coarse) {
+  .dish-pop__media {
+    animation: dish-float 4.6s ease-in-out infinite;
+  }
+  .dish-pop__shadow {
+    animation: dish-shadow-float 4.6s ease-in-out infinite;
+  }
+}
+@keyframes dish-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+@keyframes dish-shadow-float {
+  0%, 100% { transform: scaleX(1); opacity: 0.5; }
+  50% { transform: scaleX(1.09); opacity: 0.62; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dish-pop__media,
+  .dish-pop__shadow {
+    animation: none;
+  }
 }
 .dish-card__body {
   position: relative;
@@ -1097,17 +1156,8 @@ h1, h2, h3 {
    Dish 360° rotation video (Section 4)
    ------------------------------------------------------------ */
 
-.dish-card__video {
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 1px solid rgba(184, 151, 74, 0.35);
-  box-shadow: 0 30px 44px rgba(0, 0, 0, 0.62), 0 0 40px rgba(201, 119, 46, 0.14);
-  background: radial-gradient(circle, #14120f, #0e0e0f);
-}
-.dish-card:hover .dish-card__video {
-  box-shadow: 0 46px 60px rgba(0, 0, 0, 0.72), 0 0 60px rgba(201, 119, 46, 0.24);
-}
+/* (360° rotation videos parked for now — the pop-out uses still imagery;
+   see assets/MANIFEST.md if they are reintroduced later) */
 
 /* ------------------------------------------------------------
    Reservation form
