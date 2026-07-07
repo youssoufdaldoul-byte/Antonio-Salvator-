@@ -2,6 +2,7 @@
 // Paused by default; motion comes exclusively from scroll-driven
 // currentTime updates (see hooks/useScrollSystem.js).
 import { forwardRef } from 'react'
+import { asset } from '../asset'
 
 const BgVideo = forwardRef(function BgVideo(_, ref) {
   return (
@@ -10,7 +11,7 @@ const BgVideo = forwardRef(function BgVideo(_, ref) {
         id="bgv"
         ref={ref}
         className="bg-video"
-        src="/bg.mp4"
+        src={asset('/bg.mp4')}
         muted
         playsInline
         preload="auto"

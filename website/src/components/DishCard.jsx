@@ -3,6 +3,7 @@
 // composition kept, tilt disabled.
 import { useRef, useState } from 'react'
 import gsap from 'gsap'
+import { asset } from '../asset'
 
 export default function DishCard({ index, dish, cta }) {
   const cardRef = useRef(null)
@@ -41,7 +42,7 @@ export default function DishCard({ index, dish, cta }) {
       {cutoutOk ? (
         <img
           className="dish-card__cutout"
-          src={`/cutouts/dish-${index}-cutout.png`}
+          src={asset(`/cutouts/dish-${index}-cutout.png`)}
           alt={dish.name}
           loading="lazy"
           onError={() => setCutoutOk(false)}

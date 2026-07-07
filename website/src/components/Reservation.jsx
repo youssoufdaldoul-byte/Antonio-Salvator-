@@ -2,6 +2,7 @@
 // One large elegant visual (terrace at night) is allowed here.
 import { useState } from 'react'
 import { LANGS } from '../i18n'
+import { asset } from '../asset'
 
 export default function Reservation({ tr, lang, setLang }) {
   const [imgOk, setImgOk] = useState(true)
@@ -12,7 +13,7 @@ export default function Reservation({ tr, lang, setLang }) {
         {imgOk ? (
           <img
             className="reservation__img"
-            src="/images/terrace-night.png"
+            src={asset('/images/terrace-night.png')}
             alt="La terrasse de MAISON LUMIÈRE, la nuit"
             loading="lazy"
             onError={() => setImgOk(false)}

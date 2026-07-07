@@ -3,6 +3,7 @@
 // preview transitions, dimming of non-hovered links.
 import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
+import { asset } from '../asset'
 
 const PREVIEWS = {
   hero: { src: '/images/interior-hall.png', label: 'La salle' },
@@ -91,7 +92,7 @@ export default function FullscreenMenu({ tr, open, onNavigate }) {
               return failed[p.src] ? null : (
                 <img
                   key={id}
-                  src={p.src}
+                  src={asset(p.src)}
                   alt=""
                   loading="lazy"
                   className={active === id ? 'is-visible' : ''}
