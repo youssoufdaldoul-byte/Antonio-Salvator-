@@ -133,6 +133,43 @@ video {
 }
 
 /* ------------------------------------------------------------
+   Entrance veil (Step 1) — bloom + interior crossfade layers
+   between the background video and the content. Driven by
+   hooks/useEntrance.js; both layers start invisible.
+   ------------------------------------------------------------ */
+
+.entrance-veil {
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+.entrance-veil__interior {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  visibility: hidden;
+  will-change: transform, opacity;
+}
+.entrance-veil__bloom {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  background: radial-gradient(
+    ellipse at 50% 56%,
+    rgba(244, 224, 168, 0.96) 0%,
+    rgba(224, 164, 88, 0.78) 34%,
+    rgba(201, 119, 46, 0.4) 62%,
+    rgba(14, 14, 15, 0) 84%
+  );
+  will-change: opacity;
+}
+
+/* ------------------------------------------------------------
    Shared UI
    ------------------------------------------------------------ */
 
@@ -364,9 +401,12 @@ h1, h2, h3 {
    ------------------------------------------------------------ */
 
 .hero {
-  min-height: 140vh;
+  /* exactly one viewport: the pinned entrance adds its own scroll distance */
+  min-height: 100vh;
+  height: 100vh;
   justify-content: flex-start;
   padding-top: 0;
+  padding-bottom: 0;
 }
 .hero__inner {
   min-height: 100vh;

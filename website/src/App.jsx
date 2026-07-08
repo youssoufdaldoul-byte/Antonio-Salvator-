@@ -2,10 +2,12 @@
 // Layers: 0 video · 1 tint · 2 grain/particles · 10 content (see styles.css)
 import { useRef, useState, useCallback, useEffect } from 'react'
 import useScrollSystem from './hooks/useScrollSystem'
+import useEntrance from './hooks/useEntrance'
 import useReveals from './hooks/useReveals'
 import { t } from './i18n'
 
 import BgVideo from './components/BgVideo'
+import EntranceVeil from './components/EntranceVeil'
 import Particles from './components/Particles'
 import Header from './components/Header'
 import FullscreenMenu from './components/FullscreenMenu'
@@ -25,6 +27,7 @@ export default function App() {
   const tr = t[lang]
 
   useScrollSystem(videoRef)
+  useEntrance(videoRef)
   useReveals([lang])
 
   // Keyboard accessibility: Escape closes the fullscreen menu.
@@ -48,6 +51,7 @@ export default function App() {
   return (
     <>
       <BgVideo ref={videoRef} />
+      <EntranceVeil />
       <Particles />
 
       <Header
