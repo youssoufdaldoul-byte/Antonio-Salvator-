@@ -98,6 +98,8 @@ export const t = {
     compose: {
       title: 'Composez votre plat', base: 'Plat de base', supplements: 'Suppléments',
       total: 'Total', order: 'Réserver ce plat', close: 'Fermer',
+      step1: 'Étape 1 — Choisissez votre formule', step2: 'Étape 2 — Ajoutez des suppléments',
+      included: 'inclus', yourDish: 'Votre composition',
     },
   },
 
@@ -177,6 +179,8 @@ export const t = {
     compose: {
       title: 'Compose your dish', base: 'Base dish', supplements: 'Supplements',
       total: 'Total', order: 'Reserve this dish', close: 'Close',
+      step1: 'Step 1 — Choose your menu', step2: 'Step 2 — Add supplements',
+      included: 'included', yourDish: 'Your composition',
     },
   },
 
@@ -256,6 +260,8 @@ export const t = {
     compose: {
       title: 'Componi il tuo piatto', base: 'Piatto base', supplements: 'Supplementi',
       total: 'Totale', order: 'Prenota questo piatto', close: 'Chiudere',
+      step1: 'Passo 1 — Scegli il menu', step2: 'Passo 2 — Aggiungi supplementi',
+      included: 'incluso', yourDish: 'La tua composizione',
     },
   },
 
@@ -335,6 +341,8 @@ export const t = {
     compose: {
       title: 'Составьте блюдо', base: 'Основа', supplements: 'Дополнения',
       total: 'Итого', order: 'Забронировать это блюдо', close: 'Закрыть',
+      step1: 'Шаг 1 — Выберите меню', step2: 'Шаг 2 — Добавьте дополнения',
+      included: 'включено', yourDish: 'Ваша композиция',
     },
   },
 
@@ -414,6 +422,8 @@ export const t = {
     compose: {
       title: 'Stellen Sie Ihr Gericht zusammen', base: 'Grundgericht', supplements: 'Ergänzungen',
       total: 'Gesamt', order: 'Dieses Gericht reservieren', close: 'Schließen',
+      step1: 'Schritt 1 — Menü wählen', step2: 'Schritt 2 — Ergänzungen hinzufügen',
+      included: 'inklusive', yourDish: 'Ihre Komposition',
     },
   },
 
@@ -493,6 +503,8 @@ export const t = {
     compose: {
       title: 'Componga su plato', base: 'Plato base', supplements: 'Suplementos',
       total: 'Total', order: 'Reservar este plato', close: 'Cerrar',
+      step1: 'Paso 1 — Elija su menú', step2: 'Paso 2 — Añada suplementos',
+      included: 'incluido', yourDish: 'Su composición',
     },
   },
 }
