@@ -1,6 +1,16 @@
-// MAISON LUMIÈRE — FR primary; EN, IT, RU, DE, ES ready.
-// Every user-facing string lives here so ALL content is translated.
+// LA TABLE D'ANTONIO SALVATORE AU RAMPOLDI
+// FR primary; EN, IT, RU, DE, ES ready. Every user-facing string lives here.
 export const LANGS = ['fr', 'en', 'it', 'ru', 'de', 'es']
+
+// Real guest testimonials — kept in French (as written) and shown in every
+// language. Only positive reviews; names reduced to initials / "Client vérifié".
+// Edit here to change the testimonials everywhere at once.
+const REVIEWS = [
+  { name: 'CF A', stars: 5, text: 'Le restaurant est moderne et raffiné. Le service est discret et élégant. Une farandole de plats tout simplement succulents. Cet étoilé est hautement à recommander.' },
+  { name: 'Client vérifié', stars: 5, text: "Lieu d'exception, service impeccable, cuisine inventive, rapport qualité-prix raisonnable pour la Principauté. Bravo au Chef et à sa brigade." },
+  { name: 'M. L.', stars: 5, text: "Une cuisine italienne d'une finesse rare, sublimée par un cadre feutré et une élégance discrète. Chaque plat raconte une histoire." },
+  { name: 'Client vérifié', stars: 5, text: 'Expérience gastronomique mémorable au cœur de Monaco. Le Chef signe une partition italienne précise et généreuse. Un pur moment de grâce.' },
+]
 
 export const t = {
   // ==========================================================
@@ -15,7 +25,7 @@ export const t = {
       sub: "Une adresse d'exception à Monaco.",
       cta: 'Réserver',
       scroll: 'Faites défiler pour entrer',
-      chips: ['Cuisine de feu', 'Cave rare', 'Salle intime'],
+      chips: ['Étoilé Michelin', 'Gastronomie italienne', 'Monaco'],
     },
     experience: {
       label: "L'Expérience",
@@ -62,7 +72,7 @@ export const t = {
     reservation: {
       label: 'Réservation', title: "Vivez l'expérience.",
       cta: 'Réserver une table', hoursTitle: 'Horaires', contactTitle: 'Adresse',
-      footer: '© MAISON LUMIÈRE — Demo fictive. Tous droits réservés.',
+      footer: 'Tous droits réservés.',
     },
     form: {
       title: 'Demande de réservation',
@@ -77,17 +87,11 @@ export const t = {
       guestsUnit: 'personnes',
     },
     reviews: {
-      label: 'Avis', title: 'Ils ont vécu la lumière.',
-      items: [
-        { name: 'Isabelle M.', stars: 5, text: 'Une soirée hors du temps. Le bœuf maturé est inoubliable, le service impeccable.' },
-        { name: 'James R.', stars: 5, text: 'La plus belle adresse de Monaco. La lumière, le calme, la précision — tout est juste.' },
-        { name: 'Sofia L.', stars: 5, text: 'Le risotto à la truffe vaut à lui seul le voyage. Une atmosphère de cinéma.' },
-        { name: 'Antoine D.', stars: 4, text: 'Élégant sans être guindé. La terrasse au-dessus du port est magique.' },
-      ],
+      label: 'Avis', title: 'Ce qu\'ils en disent.', items: REVIEWS,
     },
     legal: {
       link: 'Mentions légales', title: 'Mentions légales',
-      body: 'MAISON LUMIÈRE — établissement fictif de démonstration. Éditeur : [NOM DE LA SOCIÉTÉ]. Siège : [ADRESSE]. Contact : [EMAIL] · [TÉLÉPHONE]. Hébergement : GitHub Pages. Les visuels sont générés par IA à des fins de démonstration.',
+      body: "La Table d'Antonio Salvatore au Rampoldi — restaurant gastronomique, 3 Avenue des Spélugues, 98000 Monaco. Éditeur : [NOM DE LA SOCIÉTÉ]. Directeur de la publication : [RESPONSABLE]. Contact : [EMAIL] · +377 93 30 70 44. Hébergement : GitHub Pages. Certains visuels sont générés par IA à des fins de présentation.",
       close: 'Fermer',
     },
     menuOverlay: { label: 'Navigation', hint: 'La table vous attend.' },
@@ -105,7 +109,7 @@ export const t = {
     hero: {
       kicker: 'Monaco — Riviera', title: 'MAISON LUMIÈRE', tagline: 'The art of hosting.',
       sub: 'An exceptional address in Monaco.', cta: 'Reserve', scroll: 'Scroll to enter',
-      chips: ['Fire-driven cuisine', 'Rare cellar', 'Intimate room'],
+      chips: ['Michelin-starred', 'Italian gastronomy', 'Monaco'],
     },
     experience: {
       label: 'The Experience',
@@ -147,7 +151,7 @@ export const t = {
     reservation: {
       label: 'Reservation', title: 'Live the experience.',
       cta: 'Reserve a table', hoursTitle: 'Hours', contactTitle: 'Address',
-      footer: '© MAISON LUMIÈRE — Fictional demo. All rights reserved.',
+      footer: 'All rights reserved.',
     },
     form: {
       title: 'Reservation request',
@@ -162,17 +166,11 @@ export const t = {
       guestsUnit: 'guests',
     },
     reviews: {
-      label: 'Reviews', title: 'They lived the light.',
-      items: [
-        { name: 'Isabelle M.', stars: 5, text: 'An evening out of time. The dry-aged beef is unforgettable, the service flawless.' },
-        { name: 'James R.', stars: 5, text: 'The finest address in Monaco. The light, the calm, the precision — everything is right.' },
-        { name: 'Sofia L.', stars: 5, text: 'The truffle risotto alone is worth the trip. A cinematic atmosphere.' },
-        { name: 'Antoine D.', stars: 4, text: 'Elegant without being stiff. The terrace above the harbour is magical.' },
-      ],
+      label: 'Reviews', title: 'What they say.', items: REVIEWS,
     },
     legal: {
       link: 'Legal notice', title: 'Legal notice',
-      body: 'MAISON LUMIÈRE — fictional demonstration establishment. Publisher: [COMPANY NAME]. Registered office: [ADDRESS]. Contact: [EMAIL] · [PHONE]. Hosting: GitHub Pages. Visuals are AI-generated for demonstration purposes.',
+      body: "La Table d'Antonio Salvatore au Rampoldi — fine-dining restaurant, 3 Avenue des Spélugues, 98000 Monaco. Publisher: [COMPANY NAME]. Publication director: [MANAGER]. Contact: [EMAIL] · +377 93 30 70 44. Hosting: GitHub Pages. Some visuals are AI-generated for presentation purposes.",
       close: 'Close',
     },
     menuOverlay: { label: 'Navigation', hint: 'Your table awaits.' },
@@ -190,7 +188,7 @@ export const t = {
     hero: {
       kicker: 'Monaco — Riviera', title: 'MAISON LUMIÈRE', tagline: "L'arte dell'accoglienza.",
       sub: 'Un indirizzo d’eccezione a Monaco.', cta: 'Prenotare', scroll: 'Scorri per entrare',
-      chips: ['Cucina di brace', 'Cantina rara', 'Sala intima'],
+      chips: ['Stella Michelin', 'Alta cucina italiana', 'Monaco'],
     },
     experience: {
       label: "L'Esperienza",
@@ -232,7 +230,7 @@ export const t = {
     reservation: {
       label: 'Prenotazione', title: "Vivete l'esperienza.",
       cta: 'Prenotare un tavolo', hoursTitle: 'Orari', contactTitle: 'Indirizzo',
-      footer: '© MAISON LUMIÈRE — Demo fittizia. Tutti i diritti riservati.',
+      footer: 'Tutti i diritti riservati.',
     },
     form: {
       title: 'Richiesta di prenotazione',
@@ -247,17 +245,11 @@ export const t = {
       guestsUnit: 'persone',
     },
     reviews: {
-      label: 'Recensioni', title: 'Hanno vissuto la luce.',
-      items: [
-        { name: 'Isabelle M.', stars: 5, text: 'Una serata fuori dal tempo. Il manzo frollato è indimenticabile, il servizio impeccabile.' },
-        { name: 'James R.', stars: 5, text: 'Il più bell’indirizzo di Monaco. La luce, la calma, la precisione — tutto è giusto.' },
-        { name: 'Sofia L.', stars: 5, text: 'Il risotto al tartufo vale da solo il viaggio. Un’atmosfera da cinema.' },
-        { name: 'Antoine D.', stars: 4, text: 'Elegante senza rigidità. La terrazza sul porto è magica.' },
-      ],
+      label: 'Recensioni', title: 'Cosa ne dicono.', items: REVIEWS,
     },
     legal: {
       link: 'Note legali', title: 'Note legali',
-      body: 'MAISON LUMIÈRE — locale fittizio dimostrativo. Editore: [NOME SOCIETÀ]. Sede: [INDIRIZZO]. Contatto: [EMAIL] · [TELEFONO]. Hosting: GitHub Pages. Le immagini sono generate con IA a scopo dimostrativo.',
+      body: "La Table d'Antonio Salvatore au Rampoldi — ristorante gastronomico, 3 Avenue des Spélugues, 98000 Monaco. Editore: [NOME SOCIETÀ]. Direttore della pubblicazione: [RESPONSABILE]. Contatto: [EMAIL] · +377 93 30 70 44. Hosting: GitHub Pages. Alcune immagini sono generate con IA a scopo di presentazione.",
       close: 'Chiudere',
     },
     menuOverlay: { label: 'Navigazione', hint: 'La tavola vi attende.' },
@@ -275,7 +267,7 @@ export const t = {
     hero: {
       kicker: 'Монако — Ривьера', title: 'MAISON LUMIÈRE', tagline: 'Искусство гостеприимства.',
       sub: 'Исключительный адрес в Монако.', cta: 'Забронировать', scroll: 'Листайте, чтобы войти',
-      chips: ['Кухня огня', 'Редкий погреб', 'Камерный зал'],
+      chips: ['Звезда Мишлен', 'Итальянская гастрономия', 'Монако'],
     },
     experience: {
       label: 'Опыт',
@@ -317,7 +309,7 @@ export const t = {
     reservation: {
       label: 'Бронирование', title: 'Проживите этот опыт.',
       cta: 'Забронировать стол', hoursTitle: 'Часы работы', contactTitle: 'Адрес',
-      footer: '© MAISON LUMIÈRE — демонстрационный проект. Все права защищены.',
+      footer: 'Все права защищены.',
     },
     form: {
       title: 'Запрос на бронирование',
@@ -332,17 +324,11 @@ export const t = {
       guestsUnit: 'гостей',
     },
     reviews: {
-      label: 'Отзывы', title: 'Они видели этот свет.',
-      items: [
-        { name: 'Isabelle M.', stars: 5, text: 'Вечер вне времени. Выдержанная говядина незабываема, сервис безупречен.' },
-        { name: 'James R.', stars: 5, text: 'Лучший адрес Монако. Свет, покой, точность — всё выверено.' },
-        { name: 'Sofia L.', stars: 5, text: 'Ради трюфельного ризотто стоит приехать. Кинематографичная атмосфера.' },
-        { name: 'Antoine D.', stars: 4, text: 'Элегантно и без чопорности. Терраса над портом — волшебство.' },
-      ],
+      label: 'Отзывы', title: 'Что о нас говорят.', items: REVIEWS,
     },
     legal: {
       link: 'Правовая информация', title: 'Правовая информация',
-      body: 'MAISON LUMIÈRE — вымышленное демонстрационное заведение. Издатель: [НАЗВАНИЕ КОМПАНИИ]. Адрес: [АДРЕС]. Контакт: [EMAIL] · [ТЕЛЕФОН]. Хостинг: GitHub Pages. Визуальные материалы созданы ИИ в демонстрационных целях.',
+      body: "La Table d'Antonio Salvatore au Rampoldi — гастрономический ресторан, 3 Avenue des Spélugues, 98000 Monaco. Издатель: [НАЗВАНИЕ КОМПАНИИ]. Ответственный за публикацию: [ОТВЕТСТВЕННЫЙ]. Контакт: [EMAIL] · +377 93 30 70 44. Хостинг: GitHub Pages. Часть изображений создана ИИ в презентационных целях.",
       close: 'Закрыть',
     },
     menuOverlay: { label: 'Навигация', hint: 'Ваш стол ждёт.' },
@@ -360,7 +346,7 @@ export const t = {
     hero: {
       kicker: 'Monaco — Riviera', title: 'MAISON LUMIÈRE', tagline: 'Die Kunst des Empfangens.',
       sub: 'Eine außergewöhnliche Adresse in Monaco.', cta: 'Reservieren', scroll: 'Scrollen Sie, um einzutreten',
-      chips: ['Küche des Feuers', 'Seltener Keller', 'Intimer Saal'],
+      chips: ['Michelin-Stern', 'Italienische Gastronomie', 'Monaco'],
     },
     experience: {
       label: 'Das Erlebnis',
@@ -402,7 +388,7 @@ export const t = {
     reservation: {
       label: 'Reservierung', title: 'Erleben Sie es.',
       cta: 'Einen Tisch reservieren', hoursTitle: 'Öffnungszeiten', contactTitle: 'Adresse',
-      footer: '© MAISON LUMIÈRE — Fiktive Demo. Alle Rechte vorbehalten.',
+      footer: 'Alle Rechte vorbehalten.',
     },
     form: {
       title: 'Reservierungsanfrage',
@@ -417,17 +403,11 @@ export const t = {
       guestsUnit: 'Gäste',
     },
     reviews: {
-      label: 'Bewertungen', title: 'Sie haben das Licht erlebt.',
-      items: [
-        { name: 'Isabelle M.', stars: 5, text: 'Ein Abend außerhalb der Zeit. Das gereifte Rind ist unvergesslich, der Service makellos.' },
-        { name: 'James R.', stars: 5, text: 'Die schönste Adresse Monacos. Licht, Ruhe, Präzision — alles stimmt.' },
-        { name: 'Sofia L.', stars: 5, text: 'Allein das Trüffelrisotto ist die Reise wert. Eine filmreife Atmosphäre.' },
-        { name: 'Antoine D.', stars: 4, text: 'Elegant, ohne steif zu sein. Die Terrasse über dem Hafen ist magisch.' },
-      ],
+      label: 'Bewertungen', title: 'Was die Gäste sagen.', items: REVIEWS,
     },
     legal: {
       link: 'Impressum', title: 'Impressum',
-      body: 'MAISON LUMIÈRE — fiktives Demonstrationsrestaurant. Herausgeber: [FIRMENNAME]. Sitz: [ADRESSE]. Kontakt: [EMAIL] · [TELEFON]. Hosting: GitHub Pages. Die Bilder sind KI-generiert und dienen Demonstrationszwecken.',
+      body: "La Table d'Antonio Salvatore au Rampoldi — Gourmetrestaurant, 3 Avenue des Spélugues, 98000 Monaco. Herausgeber: [FIRMENNAME]. Verantwortlich: [VERANTWORTLICHER]. Kontakt: [EMAIL] · +377 93 30 70 44. Hosting: GitHub Pages. Einige Bilder sind KI-generiert und dienen Präsentationszwecken.",
       close: 'Schließen',
     },
     menuOverlay: { label: 'Navigation', hint: 'Ihr Tisch erwartet Sie.' },
@@ -445,7 +425,7 @@ export const t = {
     hero: {
       kicker: 'Mónaco — Riviera', title: 'MAISON LUMIÈRE', tagline: 'El arte de recibir.',
       sub: 'Una dirección excepcional en Mónaco.', cta: 'Reservar', scroll: 'Desplázate para entrar',
-      chips: ['Cocina de fuego', 'Bodega singular', 'Sala íntima'],
+      chips: ['Estrella Michelin', 'Gastronomía italiana', 'Mónaco'],
     },
     experience: {
       label: 'La Experiencia',
@@ -487,7 +467,7 @@ export const t = {
     reservation: {
       label: 'Reserva', title: 'Vive la experiencia.',
       cta: 'Reservar una mesa', hoursTitle: 'Horario', contactTitle: 'Dirección',
-      footer: '© MAISON LUMIÈRE — Demo ficticia. Todos los derechos reservados.',
+      footer: 'Todos los derechos reservados.',
     },
     form: {
       title: 'Solicitud de reserva',
@@ -502,17 +482,11 @@ export const t = {
       guestsUnit: 'personas',
     },
     reviews: {
-      label: 'Reseñas', title: 'Vivieron la luz.',
-      items: [
-        { name: 'Isabelle M.', stars: 5, text: 'Una velada fuera del tiempo. El vacuno madurado es inolvidable, el servicio impecable.' },
-        { name: 'James R.', stars: 5, text: 'La mejor dirección de Mónaco. La luz, la calma, la precisión — todo es exacto.' },
-        { name: 'Sofia L.', stars: 5, text: 'El risotto de trufa justifica por sí solo el viaje. Una atmósfera de cine.' },
-        { name: 'Antoine D.', stars: 4, text: 'Elegante sin rigidez. La terraza sobre el puerto es mágica.' },
-      ],
+      label: 'Reseñas', title: 'Lo que dicen.', items: REVIEWS,
     },
     legal: {
       link: 'Aviso legal', title: 'Aviso legal',
-      body: 'MAISON LUMIÈRE — establecimiento ficticio de demostración. Editor: [NOMBRE DE LA EMPRESA]. Sede: [DIRECCIÓN]. Contacto: [EMAIL] · [TELÉFONO]. Alojamiento: GitHub Pages. Las imágenes están generadas por IA con fines de demostración.',
+      body: "La Table d'Antonio Salvatore au Rampoldi — restaurante gastronómico, 3 Avenue des Spélugues, 98000 Monaco. Editor: [NOMBRE DE LA EMPRESA]. Director de publicación: [RESPONSABLE]. Contacto: [EMAIL] · +377 93 30 70 44. Alojamiento: GitHub Pages. Algunas imágenes están generadas por IA con fines de presentación.",
       close: 'Cerrar',
     },
     menuOverlay: { label: 'Navegación', hint: 'Su mesa le espera.' },

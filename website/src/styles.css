@@ -425,15 +425,26 @@ h1, h2, h3 {
 .hero__kicker .gold-line {
   width: 56px;
 }
+.hero__name-prefix,
+.hero__name-suffix {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1rem, 2.4vw, 1.7rem);
+  color: var(--text-dim);
+  letter-spacing: 0.04em;
+}
+.hero__name-prefix { margin-bottom: -0.2rem; }
+.hero__name-suffix { margin-top: -0.1rem; color: var(--amber-2); }
 .hero__title {
-  font-size: clamp(3rem, 11vw, 9.5rem);
-  letter-spacing: 0.08em;
-  line-height: 1;
+  font-size: clamp(2.6rem, 9vw, 7.6rem);
+  letter-spacing: 0.05em;
+  line-height: 1.02;
   text-shadow: 0 8px 60px rgba(14, 14, 15, 0.8);
 }
 .hero__title em {
   font-style: italic;
   color: var(--amber-2);
+  display: block;
 }
 .hero__tagline {
   font-family: var(--serif);
@@ -1687,3 +1698,81 @@ h1, h2, h3 {
 @media (prefers-reduced-motion: reduce) {
   .compose-total__value { will-change: auto; }
 }
+
+/* ------------------------------------------------------------
+   Reviews — aggregate rating badge + reservation map/phone links
+   ------------------------------------------------------------ */
+
+.reviews__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: clamp(2rem, 5vh, 3rem);
+}
+.reviews__top .reviews__title { margin-bottom: 0; }
+
+.rating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55em 1.1em;
+  border-radius: 100px;
+  border: 1px solid rgba(184, 151, 74, 0.3);
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  white-space: nowrap;
+}
+.rating-badge__value {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  color: var(--text);
+  line-height: 1;
+}
+.rating-badge__scale {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--text-dim);
+}
+.rating-badge__stars {
+  display: inline-flex;
+  gap: 1px;
+  margin-left: 0.3rem;
+}
+.rating-star {
+  position: relative;
+  display: inline-block;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+.rating-star__dim { color: rgba(168, 156, 136, 0.3); }
+.rating-star__fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  color: var(--amber-2);
+  text-shadow: 0 0 10px rgba(224, 164, 88, 0.55);
+  white-space: nowrap;
+}
+
+.reservation__maplink {
+  color: inherit;
+  border-bottom: 1px solid rgba(184, 151, 74, 0.4);
+  transition: color 0.35s, border-color 0.35s;
+}
+.reservation__maplink:hover {
+  color: var(--amber-2);
+  border-color: var(--amber-2);
+}
+.reservation__phone {
+  margin-top: -0.6rem;
+}
+.reservation__phone a {
+  color: var(--amber-2);
+  letter-spacing: 0.08em;
+  font-size: 0.92rem;
+}
+.reservation__phone a:hover { text-decoration: underline; }

@@ -31,7 +31,13 @@ export default function Reservation({ tr }) {
           <span className="label label--gold">{tr.reservation.label}</span>
           <h2 className="reservation__title">{tr.reservation.title}</h2>
           <p className="reservation__address">
-            {RESTAURANT.name} — {RESTAURANT.address}, {RESTAURANT.city}.
+            {RESTAURANT.name} —{' '}
+            <a href={RESTAURANT.mapsUrl} target="_blank" rel="noreferrer" className="reservation__maplink">
+              {RESTAURANT.address}, {RESTAURANT.city}
+            </a>
+          </p>
+          <p className="reservation__phone">
+            <a href={`tel:${RESTAURANT.phone.replace(/\s/g, '')}`}>{RESTAURANT.phone}</a>
           </p>
           <div>
             {RESTAURANT.bookingUrl ? (
@@ -50,7 +56,11 @@ export default function Reservation({ tr }) {
             </div>
             <div>
               <h4>{tr.reservation.contactTitle}</h4>
-              <p>{RESTAURANT.address}</p>
+              <p>
+                <a href={RESTAURANT.mapsUrl} target="_blank" rel="noreferrer" className="reservation__maplink">
+                  {RESTAURANT.address}
+                </a>
+              </p>
               <p>{RESTAURANT.city}</p>
             </div>
           </div>

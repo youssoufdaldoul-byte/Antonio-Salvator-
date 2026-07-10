@@ -1,6 +1,11 @@
 // MAISON LUMIÈRE — fixed premium header
 import { useEffect, useState } from 'react'
 import { LANGS } from '../i18n'
+import { RESTAURANT } from '../config/restaurant'
+
+// "Antonio Salvatore" → "Antonio" + amber "Salvatore" for the logo lockup.
+const [BRAND_FIRST, ...BRAND_REST] = RESTAURANT.nameShort.split(' ')
+const BRAND_ACCENT = BRAND_REST.join(' ')
 
 export default function Header({ tr, lang, setLang, menuOpen, onToggleMenu, onReserve }) {
   const [scrolled, setScrolled] = useState(false)
@@ -13,8 +18,8 @@ export default function Header({ tr, lang, setLang, menuOpen, onToggleMenu, onRe
 
   return (
     <header className={`header ${scrolled ? 'is-scrolled' : ''}`}>
-      <a className="header__brand" href="#hero" aria-label="MAISON LUMIÈRE — retour en haut">
-        MAISON <em>LUMIÈRE</em>
+      <a className="header__brand" href="#hero" aria-label={`${RESTAURANT.name} — retour en haut`}>
+        {BRAND_FIRST} <em>{BRAND_ACCENT}</em>
       </a>
       <div className="header__side">
         <div className="lang-switch glass" role="group" aria-label="Langue">

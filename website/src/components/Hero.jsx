@@ -2,6 +2,11 @@
 // The scroll-scrubbed video is the only visual; no static imagery here.
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
+import { RESTAURANT } from '../config/restaurant'
+
+// "Antonio Salvatore" → "Antonio" + italic amber "Salvatore" in the hero.
+const [HERO_FIRST, ...HERO_REST] = RESTAURANT.nameShort.split(' ')
+const HERO_ACCENT = HERO_REST.join(' ')
 
 export default function Hero({ tr, onReserve }) {
   const rootRef = useRef(null)
@@ -11,8 +16,10 @@ export default function Hero({ tr, onReserve }) {
     const ctx = gsap.context(() => {
       gsap.timeline({ defaults: { ease: 'power3.out' } })
         .from('.hero__kicker', { autoAlpha: 0, y: 24, duration: 1.0, delay: 0.35 })
-        .from('.hero__title', { autoAlpha: 0, y: 60, duration: 1.5, letterSpacing: '0.2em' }, '-=0.6')
-        .from('.hero__tagline', { autoAlpha: 0, y: 26, duration: 1.0 }, '-=0.9')
+        .from('.hero__name-prefix', { autoAlpha: 0, y: 20, duration: 0.8 }, '-=0.5')
+        .from('.hero__title', { autoAlpha: 0, y: 60, duration: 1.5, letterSpacing: '0.2em' }, '-=0.5')
+        .from('.hero__name-suffix', { autoAlpha: 0, y: 20, duration: 0.8 }, '-=0.9')
+        .from('.hero__tagline', { autoAlpha: 0, y: 26, duration: 1.0 }, '-=0.7')
         .from('.hero__sub', { autoAlpha: 0, y: 18, duration: 0.9 }, '-=0.7')
         .from('.hero__chips .chip', { autoAlpha: 0, y: 16, stagger: 0.12, duration: 0.7 }, '-=0.6')
         .from('.hero__cta-row', { autoAlpha: 0, y: 18, duration: 0.8 }, '-=0.5')
@@ -29,9 +36,11 @@ export default function Hero({ tr, onReserve }) {
           <span className="label label--gold">{tr.hero.kicker}</span>
           <span className="gold-line" style={{ transform: 'scaleX(-1)' }} />
         </div>
+        <p className="hero__name-prefix">{RESTAURANT.namePrefix}</p>
         <h1 className="hero__title">
-          MAISON <em>LUMIÈRE</em>
+          {HERO_FIRST} <em>{HERO_ACCENT}</em>
         </h1>
+        <p className="hero__name-suffix">{RESTAURANT.nameSuffix}</p>
         <p className="hero__tagline">{tr.hero.tagline}</p>
         <p className="hero__sub">{tr.hero.sub}</p>
         <div className="hero__chips">

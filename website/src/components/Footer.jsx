@@ -16,7 +16,7 @@ export default function Footer({ tr, lang, setLang }) {
   return (
     <footer className="footer-block">
       <div className="footer">
-        <span>{tr.reservation.footer}</span>
+        <span>© {new Date().getFullYear()} {RESTAURANT.name} — {tr.reservation.footer}</span>
         <nav className="footer__links" aria-label="Footer">
           {RESTAURANT.instagram && (
             <a href={RESTAURANT.instagram} target="_blank" rel="noreferrer">Instagram</a>
