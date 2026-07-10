@@ -36,7 +36,7 @@ export default function Maison({ tr }) {
       <div className="maison__bigtype" aria-hidden="true">
         {tr.maison.bigtype}
       </div>
-      <div className="section__head">
+      <div className="section__head" data-reveal>
         <span className="gold-line" data-line />
         <span className="label label--gold">{tr.maison.label}</span>
       </div>

@@ -34,7 +34,7 @@ export default function Ambiance({ tr }) {
 
   return (
     <section id="ambiance" className="section ambiance" ref={rootRef}>
-      <div className="section__head">
+      <div className="section__head" data-reveal>
         <span className="gold-line" data-line />
         <span className="label label--gold">{tr.ambiance.label}</span>
       </div>

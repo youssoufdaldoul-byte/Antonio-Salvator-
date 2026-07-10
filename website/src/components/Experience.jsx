@@ -93,7 +93,7 @@ export default function Experience({ tr }) {
 
   return (
     <section id="experience" className="section experience" ref={rootRef}>
-      <div className="section__head">
+      <div className="section__head" data-reveal>
         <span className="gold-line" data-line />
         <span className="label label--gold">{tr.experience.label}</span>
       </div>

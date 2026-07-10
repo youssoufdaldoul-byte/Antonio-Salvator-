@@ -1,47 +1,57 @@
-// MAISON LUMIÈRE — scroll reveals (Phase 12)
-// Elements tagged [data-reveal] fade in, rise slightly and brighten softly.
-// Children of [data-reveal-group] are staggered.
+// MAISON LUMIÈRE — scroll reveals (Step 2)
+// Three declarative attributes, all transform/opacity only (no layout shift):
+//   [data-reveal]        single element: fade in + rise + soften-brighten
+//   [data-reveal-group]  children stagger together when the group enters
+//   [data-reveal-batch]  children reveal individually as EACH enters the
+//                        viewport (batched stagger — right for tall grids)
+//   [data-line]          thin gold lines draw themselves in
 import { useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
+const FROM = { autoAlpha: 0, y: 38, filter: 'blur(5px) brightness(0.7)' }
+const TO = {
+  autoAlpha: 1,
+  y: 0,
+  filter: 'blur(0px) brightness(1)',
+  duration: 1.2,
+  ease: 'power3.out',
+  clearProps: 'filter', // keep glass blur/backdrop rendering clean afterwards
+}
+
 export default function useReveals(deps = []) {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.utils.toArray('[data-reveal]').forEach((el) => {
-        gsap.fromTo(
-          el,
-          { autoAlpha: 0, y: 42, filter: 'brightness(0.72)' },
-          {
-            autoAlpha: 1,
-            y: 0,
-            filter: 'brightness(1)',
-            duration: 1.15,
-            ease: 'power3.out',
-            scrollTrigger: { trigger: el, start: 'top 86%', once: true },
-          },
-        )
+        gsap.fromTo(el, FROM, {
+          ...TO,
+          scrollTrigger: { trigger: el, start: 'top 86%', once: true },
+        })
       })
 
       gsap.utils.toArray('[data-reveal-group]').forEach((group) => {
-        gsap.fromTo(
-          group.children,
-          { autoAlpha: 0, y: 36, filter: 'brightness(0.72)' },
-          {
-            autoAlpha: 1,
-            y: 0,
-            filter: 'brightness(1)',
-            duration: 1.0,
-            ease: 'power3.out',
-            stagger: 0.14,
-            scrollTrigger: { trigger: group, start: 'top 84%', once: true },
-          },
-        )
+        gsap.fromTo(group.children, FROM, {
+          ...TO,
+          duration: 1.05,
+          stagger: 0.12,
+          scrollTrigger: { trigger: group, start: 'top 84%', once: true },
+        })
       })
 
-      // Thin gold lines that draw themselves in.
+      // Tall grids: each child reveals as it enters, entries arriving in the
+      // same frame are staggered as a small batch.
+      gsap.utils.toArray('[data-reveal-batch]').forEach((container) => {
+        gsap.set(container.children, FROM)
+        ScrollTrigger.batch(container.children, {
+          start: 'top 88%',
+          once: true,
+          onEnter: (batch) =>
+            gsap.to(batch, { ...TO, duration: 1.05, stagger: 0.13 }),
+        })
+      })
+
       gsap.utils.toArray('[data-line]').forEach((el) => {
         gsap.fromTo(
           el,

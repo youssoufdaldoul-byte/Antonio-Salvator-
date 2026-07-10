@@ -18,7 +18,7 @@ export default function Reviews({ tr }) {
 
   return (
     <section id="reviews" className="section reviews" aria-label={tr.reviews.label}>
-      <div className="section__head">
+      <div className="section__head" data-reveal>
         <span className="gold-line" data-line />
         <span className="label label--gold">{tr.reviews.label}</span>
       </div>
