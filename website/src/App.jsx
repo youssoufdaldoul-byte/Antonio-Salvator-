@@ -68,7 +68,7 @@ export default function App() {
         <Hero tr={tr} onReserve={() => scrollTo('reservation')} />
         <Experience tr={tr} />
         <Maison tr={tr} />
-        <MenuSection tr={tr} />
+        <MenuSection tr={tr} lang={lang} />
         <Ambiance tr={tr} />
         <Reservation tr={tr} />
         <Reviews tr={tr} />

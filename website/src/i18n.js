@@ -91,6 +91,10 @@ export const t = {
       close: 'Fermer',
     },
     menuOverlay: { label: 'Navigation', hint: 'La table vous attend.' },
+    compose: {
+      title: 'Composez votre plat', base: 'Plat de base', supplements: 'Suppléments',
+      total: 'Total', order: 'Réserver ce plat', close: 'Fermer',
+    },
   },
 
   // ==========================================================
@@ -172,6 +176,10 @@ export const t = {
       close: 'Close',
     },
     menuOverlay: { label: 'Navigation', hint: 'Your table awaits.' },
+    compose: {
+      title: 'Compose your dish', base: 'Base dish', supplements: 'Supplements',
+      total: 'Total', order: 'Reserve this dish', close: 'Close',
+    },
   },
 
   // ==========================================================
@@ -253,6 +261,10 @@ export const t = {
       close: 'Chiudere',
     },
     menuOverlay: { label: 'Navigazione', hint: 'La tavola vi attende.' },
+    compose: {
+      title: 'Componi il tuo piatto', base: 'Piatto base', supplements: 'Supplementi',
+      total: 'Totale', order: 'Prenota questo piatto', close: 'Chiudere',
+    },
   },
 
   // ==========================================================
@@ -334,6 +346,10 @@ export const t = {
       close: 'Закрыть',
     },
     menuOverlay: { label: 'Навигация', hint: 'Ваш стол ждёт.' },
+    compose: {
+      title: 'Составьте блюдо', base: 'Основа', supplements: 'Дополнения',
+      total: 'Итого', order: 'Забронировать это блюдо', close: 'Закрыть',
+    },
   },
 
   // ==========================================================
@@ -415,6 +431,10 @@ export const t = {
       close: 'Schließen',
     },
     menuOverlay: { label: 'Navigation', hint: 'Ihr Tisch erwartet Sie.' },
+    compose: {
+      title: 'Stellen Sie Ihr Gericht zusammen', base: 'Grundgericht', supplements: 'Ergänzungen',
+      total: 'Gesamt', order: 'Dieses Gericht reservieren', close: 'Schließen',
+    },
   },
 
   // ==========================================================
@@ -496,5 +516,9 @@ export const t = {
       close: 'Cerrar',
     },
     menuOverlay: { label: 'Navegación', hint: 'Su mesa le espera.' },
+    compose: {
+      title: 'Componga su plato', base: 'Plato base', supplements: 'Suplementos',
+      total: 'Total', order: 'Reservar este plato', close: 'Cerrar',
+    },
   },
 }

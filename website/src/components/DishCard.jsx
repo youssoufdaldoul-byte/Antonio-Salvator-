@@ -12,7 +12,7 @@ import { asset } from '../asset'
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function DishCard({ index, dish, cta }) {
+export default function DishCard({ index, dish, cta, onDiscover }) {
   const cardRef = useRef(null)
   const popRef = useRef(null)
   const mediaRef = useRef(null)
@@ -120,7 +120,7 @@ export default function DishCard({ index, dish, cta }) {
         <p className="dish-card__desc">{dish.desc}</p>
         <div className="dish-card__row">
           <span className="dish-card__price">{dish.price}</span>
-          <button className="dish-card__cta">{cta}</button>
+          <button className="dish-card__cta" onClick={onDiscover}>{cta}</button>
         </div>
       </div>
     </article>
