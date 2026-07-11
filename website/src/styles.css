@@ -1872,3 +1872,155 @@ h1, h2, h3 {
   font-size: 0.92rem;
 }
 .reservation__phone a:hover { text-decoration: underline; }
+
+/* ------------------------------------------------------------
+   Page shell — secondary routes (La Maison, …)
+   Static cinematic backdrop replacing the home scroll-video.
+   ------------------------------------------------------------ */
+
+.page-shell {
+  position: relative;
+  min-height: 100vh;
+}
+.page-shell__bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% -10%, rgba(201, 119, 46, 0.13), transparent 55%),
+    radial-gradient(ellipse at 85% 110%, rgba(184, 151, 74, 0.08), transparent 60%),
+    linear-gradient(180deg, #0e0e0f 0%, #14120f 55%, #0e0e0f 100%);
+}
+.page-shell__content {
+  padding-top: clamp(5.5rem, 12vh, 8rem);
+}
+
+/* ------------------------------------------------------------
+   Page · La Maison — the chef & the team
+   ------------------------------------------------------------ */
+
+.chef-page .section {
+  min-height: 0;
+}
+.chef-hero {
+  padding-bottom: clamp(1.5rem, 4vh, 3rem);
+}
+.chef-hero__title {
+  font-size: clamp(2.6rem, 7.5vw, 5.6rem);
+  line-height: 1.04;
+  margin-bottom: 1.2rem;
+}
+.chef-hero__intro {
+  max-width: 620px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.05rem, 1.9vw, 1.4rem);
+  color: var(--text-dim);
+}
+
+.chef-figure {
+  position: relative;
+  margin: 0 clamp(1.2rem, 6vw, 6rem);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(184, 151, 74, 0.22);
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.6);
+}
+.chef-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scale: 1.14; /* headroom for the parallax drift */
+}
+.chef-figure--wide {
+  aspect-ratio: 21 / 9;
+}
+.chef-figure--portrait {
+  aspect-ratio: 4 / 5;
+  margin: 0;
+}
+.chef-figure figcaption {
+  position: absolute;
+  left: 1.4rem;
+  bottom: 1.2rem;
+  z-index: 2;
+  color: var(--amber-2);
+  text-shadow: 0 2px 18px rgba(14, 14, 15, 0.9);
+}
+.chef-figure::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(14, 14, 15, 0.55));
+  pointer-events: none;
+}
+
+.chef-quote {
+  max-width: 820px;
+  margin: clamp(4rem, 9vh, 6rem) auto;
+  padding: 0 clamp(1.2rem, 6vw, 3rem);
+  text-align: center;
+}
+.chef-quote span {
+  display: block;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.5rem, 3.4vw, 2.4rem);
+  line-height: 1.35;
+  color: var(--amber-2);
+  text-shadow: 0 0 44px rgba(224, 164, 88, 0.25);
+}
+.chef-quote cite {
+  display: block;
+  margin-top: 1rem;
+  font-style: normal;
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.chef-duo {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(1.6rem, 4vw, 3.4rem);
+  align-items: center;
+}
+.chef-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.chef-block {
+  padding: 1.6rem 1.8rem;
+}
+.chef-block__title {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  letter-spacing: 0.06em;
+  margin: 0.5rem 0 0.5rem;
+}
+.chef-block__text {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+}
+
+.chef-cta {
+  display: flex;
+  justify-content: center;
+  padding: clamp(2rem, 6vh, 4rem) 1.2rem clamp(4rem, 9vh, 6rem);
+}
+
+@media (max-width: 860px) {
+  .chef-duo {
+    grid-template-columns: 1fr;
+  }
+  .chef-figure--portrait {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  .chef-figure--wide {
+    aspect-ratio: 16 / 10;
+  }
+}

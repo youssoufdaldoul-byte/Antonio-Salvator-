@@ -1,34 +1,27 @@
-// MAISON LUMIÈRE — cinematic scroll-driven single page
-// Layers: 0 video · 1 tint · 2 grain/particles · 10 content (see styles.css)
+// LA TABLE D'ANTONIO SALVATORE — routed shell
+// "/" keeps the original cinematic one-page experience untouched; secondary
+// pages mount inside PageShell. HashRouter so deep links work on any static
+// host (GitHub Pages, Vercel) without rewrites.
 import { useRef, useState, useCallback, useEffect } from 'react'
+import { HashRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom'
 import useScrollSystem from './hooks/useScrollSystem'
-import useEntrance from './hooks/useEntrance'
-import useReveals from './hooks/useReveals'
 import { t } from './i18n'
 
-import BgVideo from './components/BgVideo'
-import EntranceVeil from './components/EntranceVeil'
 import Particles from './components/Particles'
 import Header from './components/Header'
 import FullscreenMenu from './components/FullscreenMenu'
-import Hero from './components/Hero'
-import Experience from './components/Experience'
-import Maison from './components/Maison'
-import MenuSection from './components/MenuSection'
-import Ambiance from './components/Ambiance'
-import Reviews from './components/Reviews'
-import Reservation from './components/Reservation'
-import Footer from './components/Footer'
+import Home from './pages/Home'
+import MaisonPage from './pages/MaisonPage'
 
-export default function App() {
+function Shell() {
   const videoRef = useRef(null)
   const [lang, setLang] = useState('fr')
   const [menuOpen, setMenuOpen] = useState(false)
   const tr = t[lang]
+  const navigate = useNavigate()
+  const location = useLocation()
 
   useScrollSystem(videoRef)
-  useEntrance(videoRef)
-  useReveals([lang])
 
   // Keyboard accessibility: Escape closes the fullscreen menu.
   useEffect(() => {
@@ -38,42 +31,72 @@ export default function App() {
     return () => window.removeEventListener('keydown', onKey)
   }, [menuOpen])
 
-  const scrollTo = useCallback((id) => {
-    setMenuOpen(false)
-    // small delay so the menu close animation starts before travel
-    setTimeout(() => {
-      const el = document.getElementById(id)
-      if (el && window.__lenis) window.__lenis.scrollTo(el, { offset: 0, duration: 1.6 })
-      else el?.scrollIntoView({ behavior: 'smooth' })
-    }, 350)
-  }, [])
+  // Route-aware navigation: sections live on "/", pages are routes.
+  const goSection = useCallback(
+    (id) => {
+      setMenuOpen(false)
+      if (location.pathname !== '/') {
+        navigate('/', { state: { scrollTo: id } })
+        return
+      }
+      setTimeout(() => {
+        const el = document.getElementById(id)
+        if (el && window.__lenis) window.__lenis.scrollTo(el, { offset: 0, duration: 1.6 })
+        else el?.scrollIntoView({ behavior: 'smooth' })
+      }, 350)
+    },
+    [location.pathname, navigate],
+  )
+
+  const goRoute = useCallback(
+    (to) => {
+      setMenuOpen(false)
+      setTimeout(() => navigate(to), 300)
+    },
+    [navigate],
+  )
+
+  const onReserve = useCallback(() => goSection('reservation'), [goSection])
 
   return (
     <>
-      <BgVideo ref={videoRef} />
-      <EntranceVeil />
       <Particles />
-
       <Header
         tr={tr}
         lang={lang}
         setLang={setLang}
         menuOpen={menuOpen}
         onToggleMenu={() => setMenuOpen((v) => !v)}
-        onReserve={() => scrollTo('reservation')}
+        onReserve={onReserve}
+        onHome={() => goRoute('/')}
       />
-      <FullscreenMenu tr={tr} open={menuOpen} onNavigate={scrollTo} />
-
-      <main className="site-content">
-        <Hero tr={tr} onReserve={() => scrollTo('reservation')} />
-        <Experience tr={tr} />
-        <Maison tr={tr} />
-        <MenuSection tr={tr} lang={lang} />
-        <Ambiance tr={tr} />
-        <Reservation tr={tr} />
-        <Reviews tr={tr} />
-        <Footer tr={tr} lang={lang} setLang={setLang} />
-      </main>
+      <FullscreenMenu
+        tr={tr}
+        open={menuOpen}
+        pathname={location.pathname}
+        onSection={goSection}
+        onRoute={goRoute}
+      />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Home tr={tr} lang={lang} setLang={setLang} videoRef={videoRef} onReserve={onReserve} />
+          }
+        />
+        <Route
+          path="/maison"
+          element={<MaisonPage tr={tr} lang={lang} setLang={setLang} onReserve={onReserve} />}
+        />
+      </Routes>
     </>
+  )
+}
+
+export default function App() {
+  return (
+    <HashRouter>
+      <Shell />
+    </HashRouter>
   )
 }

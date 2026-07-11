@@ -1,35 +1,38 @@
-// MAISON LUMIÈRE — fullscreen hamburger menu (Phase 11)
-// GSAP open/close, oversized preview visual on the right, hover-driven
-// preview transitions, dimming of non-hovered links.
+// LA TABLE D'ANTONIO SALVATORE — fullscreen menu, the gateway to the pages.
+// Data-driven NAV: section items scroll on "/", route items navigate.
+// Each link swaps an elegant visual preview on hover. Adding a future page
+// is one entry in NAV + one PREVIEWS line.
 import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { asset } from '../asset'
 
+// type 'section' → id on the home page · type 'route' → router path
+const NAV = [
+  { key: 'home', type: 'route', to: '/', trKey: 'home' },
+  { key: 'maison', type: 'route', to: '/maison', trKey: 'maison' },
+  { key: 'experience', type: 'section', id: 'experience', trKey: 'experience' },
+  { key: 'menu', type: 'section', id: 'menu', trKey: 'menu' },
+  { key: 'ambiance', type: 'section', id: 'ambiance', trKey: 'ambiance' },
+  { key: 'reservation', type: 'section', id: 'reservation', trKey: 'reserve' },
+]
+
 const PREVIEWS = {
-  hero: { src: '/images/interior-hall.webp', label: 'La salle' },
+  home: { src: '/images/interior-hall.webp', label: 'La salle' },
+  maison: { src: '/images/kitchen-scene.webp', fallback: '/images/detail-bar.webp', label: 'La cuisine' },
   experience: { src: '/images/detail-table.webp', label: 'La table' },
-  maison: { src: '/images/detail-bar.webp', label: 'Le bar' },
   menu: { src: '/images/dish-2.webp', label: 'Les plats' },
   ambiance: { src: '/images/terrace-night.webp', label: 'La terrasse' },
   reservation: { src: '/images/terrace-night.webp', label: 'Votre table' },
 }
 
-const IDS = ['hero', 'experience', 'maison', 'menu', 'ambiance', 'reservation']
-
-export default function FullscreenMenu({ tr, open, onNavigate }) {
+export default function FullscreenMenu({ tr, open, pathname, onSection, onRoute }) {
   const rootRef = useRef(null)
   const [hovered, setHovered] = useState(null)
   const [failed, setFailed] = useState({})
-  const active = hovered ?? 'hero'
+  const active = hovered ?? (pathname === '/maison' ? 'maison' : 'home')
 
-  const labels = [
-    tr.nav.home,
-    tr.nav.experience,
-    tr.nav.maison,
-    tr.nav.menu,
-    tr.nav.ambiance,
-    tr.nav.reserve,
-  ]
+  const isCurrent = (item) =>
+    item.type === 'route' ? pathname === item.to : pathname === '/' && false
 
   useEffect(() => {
     const el = rootRef.current
@@ -42,44 +45,43 @@ export default function FullscreenMenu({ tr, open, onNavigate }) {
       gsap.timeline()
         .set(el, { visibility: 'visible' })
         .fromTo(el, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.55, ease: 'power2.out' })
-        .fromTo(
-          links,
-          { y: 56, autoAlpha: 0 },
-          { y: 0, autoAlpha: 1, duration: 0.8, stagger: 0.07, ease: 'power3.out' },
-          '-=0.25',
-        )
-        .fromTo(
-          preview,
-          { autoAlpha: 0, x: 44, scale: 0.97 },
-          { autoAlpha: 1, x: 0, scale: 1, duration: 0.9, ease: 'power3.out' },
-          '-=0.7',
-        )
+        .fromTo(links, { y: 56, autoAlpha: 0 },
+          { y: 0, autoAlpha: 1, duration: 0.8, stagger: 0.06, ease: 'power3.out' }, '-=0.25')
+        .fromTo(preview, { autoAlpha: 0, x: 44, scale: 0.97 },
+          { autoAlpha: 1, x: 0, scale: 1, duration: 0.9, ease: 'power3.out' }, '-=0.7')
         .fromTo(hint, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.6 }, '-=0.5')
     } else {
       gsap.timeline()
-        .to(links, { y: -30, autoAlpha: 0, duration: 0.4, stagger: 0.04, ease: 'power2.in' })
+        .to(links, { y: -30, autoAlpha: 0, duration: 0.4, stagger: 0.03, ease: 'power2.in' })
         .to(preview, { autoAlpha: 0, x: 30, duration: 0.4, ease: 'power2.in' }, '<')
         .to(el, { autoAlpha: 0, duration: 0.45, ease: 'power2.inOut' }, '-=0.2')
         .set(el, { visibility: 'hidden' })
     }
   }, [open])
 
+  const activate = (item) => {
+    if (item.type === 'route') onRoute(item.to)
+    else onSection(item.id)
+  }
+
+  const previewSrc = (p) => p.src && !failed[p.src] ? p.src : p.fallback && !failed[p.fallback] ? p.fallback : null
+
   return (
     <div ref={rootRef} className="fs-menu" aria-hidden={!open}>
       <div className="fs-menu__inner">
         <nav className={`fs-menu__nav ${hovered ? 'has-hover' : ''}`} aria-label={tr.menuOverlay.label}>
-          {IDS.map((id, i) => (
+          {NAV.map((item, i) => (
             <button
-              key={id}
-              className={`fs-link ${active === id ? 'is-active' : ''}`}
-              onMouseEnter={() => setHovered(id)}
+              key={item.key}
+              className={`fs-link ${active === item.key ? 'is-active' : ''} ${isCurrent(item) ? 'is-current' : ''}`}
+              onMouseEnter={() => setHovered(item.key)}
               onMouseLeave={() => setHovered(null)}
-              onFocus={() => setHovered(id)}
+              onFocus={() => setHovered(item.key)}
               onBlur={() => setHovered(null)}
-              onClick={() => onNavigate(id)}
+              onClick={() => activate(item)}
             >
               <span className="fs-link__num">0{i + 1}</span>
-              {labels[i]}
+              {tr.nav[item.trKey]}
             </button>
           ))}
         </nav>
@@ -87,20 +89,21 @@ export default function FullscreenMenu({ tr, open, onNavigate }) {
         <div className="fs-menu__preview glass">
           <div className="fs-menu__preview-back" />
           <div className="fs-menu__frame">
-            {IDS.map((id) => {
-              const p = PREVIEWS[id]
-              return failed[p.src] ? null : (
+            {NAV.map((item) => {
+              const p = PREVIEWS[item.key]
+              const src = previewSrc(p)
+              return src ? (
                 <img
-                  key={id}
-                  src={asset(p.src)}
+                  key={item.key}
+                  src={asset(src)}
                   alt=""
                   loading="lazy"
-                  className={active === id ? 'is-visible' : ''}
-                  onError={() => setFailed((f) => ({ ...f, [p.src]: true }))}
+                  className={active === item.key ? 'is-visible' : ''}
+                  onError={() => setFailed((f) => ({ ...f, [src]: true }))}
                 />
-              )
+              ) : null
             })}
-            {failed[PREVIEWS[active].src] && (
+            {!previewSrc(PREVIEWS[active]) && (
               <div className="fs-menu__frame-missing">asset à venir</div>
             )}
             <span className="label label--gold fs-menu__caption">{PREVIEWS[active].label}</span>

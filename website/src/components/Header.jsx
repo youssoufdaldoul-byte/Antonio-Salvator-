@@ -7,7 +7,7 @@ import { RESTAURANT } from '../config/restaurant'
 const [BRAND_FIRST, ...BRAND_REST] = RESTAURANT.nameShort.split(' ')
 const BRAND_ACCENT = BRAND_REST.join(' ')
 
-export default function Header({ tr, lang, setLang, menuOpen, onToggleMenu, onReserve }) {
+export default function Header({ tr, lang, setLang, menuOpen, onToggleMenu, onReserve, onHome }) {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -18,9 +18,9 @@ export default function Header({ tr, lang, setLang, menuOpen, onToggleMenu, onRe
 
   return (
     <header className={`header ${scrolled ? 'is-scrolled' : ''}`}>
-      <a className="header__brand" href="#hero" aria-label={`${RESTAURANT.name} — retour en haut`}>
+      <button className="header__brand" onClick={onHome} aria-label={`${RESTAURANT.name} — accueil`}>
         {BRAND_FIRST} <em>{BRAND_ACCENT}</em>
-      </a>
+      </button>
       <div className="header__side">
         <div className="lang-switch glass" role="group" aria-label="Langue">
           {LANGS.map((l) => (

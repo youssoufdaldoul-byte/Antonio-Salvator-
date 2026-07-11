@@ -66,3 +66,16 @@ bash scripts/encode-scroll-video.sh   # writes website/public/bg.mp4
 |---|---|---|
 | `dishes-360/dish-1-360.mp4` — Foie gras | `5feea8a5-4c7d-4a15-97bb-32b6a2fa2092` | `hf_20260707_135611_5feea8a5-4c7d-4a15-97bb-32b6a2fa2092.mp4` |
 | `dishes-360/dish-2-360.mp4` … `dish-6-360.mp4` | **pending — Higgsfield workspace out of credits** (5 credits left on starter plan). Re-run after top-up with the same prompt/settings, start_image = dish job IDs above. |
+
+## Page · La Maison (chef & team) — Nano Banana Pro 2K → `website/public/images/`
+
+| Path | Job ID | File |
+|---|---|---|
+| `images/kitchen-scene.webp` (16:9) | `70533786-5a29-446f-8ea7-fb3dc05072cc` | `hf_20260711_133114_70533786-5a29-446f-8ea7-fb3dc05072cc.png` |
+| `images/plating-hands.webp` (4:5) | `662267fb-9548-4cf6-93fa-3e46f3c4009f` | `hf_20260711_133126_662267fb-9548-4cf6-93fa-3e46f3c4009f.png` |
+| `images/kitchen-pass.webp` (16:9) | `e0ef7b64-a360-4a39-9efa-53a3061b9438` | `hf_20260711_133145_e0ef7b64-a360-4a39-9efa-53a3061b9438.png` |
+
+Download the PNGs, then from `website/`: drop them in `public/images/` as
+`kitchen-scene.png` etc. and run `node scripts/optimize-images.mjs` to get the
+`.webp` versions the page expects. Until then the page falls back to existing
+ambiance photography.

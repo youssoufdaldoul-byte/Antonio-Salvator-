@@ -101,6 +101,19 @@ export const t = {
       step1: 'Étape 1 — Choisissez votre formule', step2: 'Étape 2 — Ajoutez des suppléments',
       included: 'inclus', yourDish: 'Votre composition',
     },
+    chef: {
+      label: 'La Maison',
+      title: "L'âme de la maison",
+      intro: "Derrière chaque assiette, un homme, une brigade, une exigence. Antonio Salvatore signe une cuisine italienne d'auteur, précise et généreuse, au cœur de Monte-Carlo.",
+      q1: "La cuisine est une mémoire que l'on sert, encore chaude.",
+      q2: "L'étoile n'est pas un trophée. C'est une promesse, renouvelée chaque soir.",
+      blocks: [
+        { num: '01', title: 'Le Chef', text: "De la Basilicate aux tables de la Principauté : un parcours forgé dans les maisons d'exception, une signature saluée par le Guide Michelin." },
+        { num: '02', title: 'La Philosophie', text: 'Le produit d’abord, la saison toujours. Des gestes précis, des cuissons patientes, une élégance sans démonstration.' },
+        { num: '03', title: 'La Brigade', text: 'Une équipe soudée, formée aux exigences des grandes maisons, animée par le même feu : recevoir, régaler, émouvoir.' },
+      ],
+      captions: ['La cuisine, le soir', 'Le geste', 'Le passe'],
+    },
   },
 
   // ==========================================================
@@ -181,6 +194,19 @@ export const t = {
       total: 'Total', order: 'Reserve this dish', close: 'Close',
       step1: 'Step 1 — Choose your menu', step2: 'Step 2 — Add supplements',
       included: 'included', yourDish: 'Your composition',
+    },
+    chef: {
+      label: 'The House',
+      title: 'The soul of the house',
+      intro: 'Behind every plate: a man, a brigade, a standard. Antonio Salvatore signs a precise, generous Italian cuisine in the heart of Monte-Carlo.',
+      q1: 'Cooking is a memory, served while it is still warm.',
+      q2: 'The star is not a trophy. It is a promise, renewed every evening.',
+      blocks: [
+        { num: '01', title: 'The Chef', text: 'From Basilicata to the tables of the Principality: a journey forged in exceptional houses, a signature recognised by the Michelin Guide.' },
+        { num: '02', title: 'The Philosophy', text: 'Produce first, season always. Precise gestures, patient cooking, elegance without display.' },
+        { num: '03', title: 'The Brigade', text: 'A close-knit team, trained to the standards of the great houses, driven by the same fire: to host, to delight, to move.' },
+      ],
+      captions: ['The kitchen at night', 'The gesture', 'The pass'],
     },
   },
 
@@ -263,6 +289,19 @@ export const t = {
       step1: 'Passo 1 — Scegli il menu', step2: 'Passo 2 — Aggiungi supplementi',
       included: 'incluso', yourDish: 'La tua composizione',
     },
+    chef: {
+      label: 'La Maison',
+      title: "L'anima della casa",
+      intro: 'Dietro ogni piatto: un uomo, una brigata, un’esigenza. Antonio Salvatore firma una cucina italiana d’autore, precisa e generosa, nel cuore di Monte-Carlo.',
+      q1: 'La cucina è una memoria che si serve ancora calda.',
+      q2: 'La stella non è un trofeo. È una promessa, rinnovata ogni sera.',
+      blocks: [
+        { num: '01', title: 'Lo Chef', text: 'Dalla Basilicata alle tavole del Principato: un percorso forgiato nelle grandi case, una firma riconosciuta dalla Guida Michelin.' },
+        { num: '02', title: 'La Filosofia', text: 'Prima il prodotto, sempre la stagione. Gesti precisi, cotture pazienti, eleganza senza ostentazione.' },
+        { num: '03', title: 'La Brigata', text: 'Una squadra affiatata, formata alle esigenze delle grandi maison, animata dallo stesso fuoco: accogliere, deliziare, emozionare.' },
+      ],
+      captions: ['La cucina, la sera', 'Il gesto', 'Il pass'],
+    },
   },
 
   // ==========================================================
@@ -343,6 +382,19 @@ export const t = {
       total: 'Итого', order: 'Забронировать это блюдо', close: 'Закрыть',
       step1: 'Шаг 1 — Выберите меню', step2: 'Шаг 2 — Добавьте дополнения',
       included: 'включено', yourDish: 'Ваша композиция',
+    },
+    chef: {
+      label: 'Дом',
+      title: 'Душа этого дома',
+      intro: 'За каждой тарелкой — человек, бригада, стандарт. Антонио Сальваторе создаёт авторскую итальянскую кухню, точную и щедрую, в сердце Монте-Карло.',
+      q1: 'Кухня — это память, которую подают ещё тёплой.',
+      q2: 'Звезда — не трофей. Это обещание, которое даётся заново каждый вечер.',
+      blocks: [
+        { num: '01', title: 'Шеф', text: 'От Базиликаты до столов Княжества: путь, закалённый в исключительных домах, почерк, отмеченный гидом Michelin.' },
+        { num: '02', title: 'Философия', text: 'Сначала продукт, всегда сезон. Точные жесты, терпеливое приготовление, элегантность без показности.' },
+        { num: '03', title: 'Бригада', text: 'Сплочённая команда, воспитанная стандартами великих домов и движимая одним огнём: принимать, радовать, волновать.' },
+      ],
+      captions: ['Кухня вечером', 'Жест', 'Пасс'],
     },
   },
 
@@ -425,6 +477,19 @@ export const t = {
       step1: 'Schritt 1 — Menü wählen', step2: 'Schritt 2 — Ergänzungen hinzufügen',
       included: 'inklusive', yourDish: 'Ihre Komposition',
     },
+    chef: {
+      label: 'Das Haus',
+      title: 'Die Seele des Hauses',
+      intro: 'Hinter jedem Teller: ein Mann, eine Brigade, ein Anspruch. Antonio Salvatore steht für eine präzise, großzügige italienische Autorenküche im Herzen von Monte-Carlo.',
+      q1: 'Kochen ist Erinnerung, die man noch warm serviert.',
+      q2: 'Der Stern ist keine Trophäe. Er ist ein Versprechen, jeden Abend erneuert.',
+      blocks: [
+        { num: '01', title: 'Der Chef', text: 'Von der Basilikata an die Tische des Fürstentums: ein Weg, geformt in außergewöhnlichen Häusern, eine vom Guide Michelin gewürdigte Handschrift.' },
+        { num: '02', title: 'Die Philosophie', text: 'Erst das Produkt, immer die Saison. Präzise Gesten, geduldiges Garen, Eleganz ohne Effekthascherei.' },
+        { num: '03', title: 'Die Brigade', text: 'Ein eingespieltes Team, geschult am Anspruch der großen Häuser, getragen vom selben Feuer: empfangen, verwöhnen, berühren.' },
+      ],
+      captions: ['Die Küche am Abend', 'Die Geste', 'Der Pass'],
+    },
   },
 
   // ==========================================================
@@ -505,6 +570,19 @@ export const t = {
       total: 'Total', order: 'Reservar este plato', close: 'Cerrar',
       step1: 'Paso 1 — Elija su menú', step2: 'Paso 2 — Añada suplementos',
       included: 'incluido', yourDish: 'Su composición',
+    },
+    chef: {
+      label: 'La Casa',
+      title: 'El alma de la casa',
+      intro: 'Detrás de cada plato: un hombre, una brigada, una exigencia. Antonio Salvatore firma una cocina italiana de autor, precisa y generosa, en el corazón de Monte-Carlo.',
+      q1: 'La cocina es una memoria que se sirve aún caliente.',
+      q2: 'La estrella no es un trofeo. Es una promesa, renovada cada noche.',
+      blocks: [
+        { num: '01', title: 'El Chef', text: 'De Basilicata a las mesas del Principado: una trayectoria forjada en casas excepcionales, una firma reconocida por la Guía Michelin.' },
+        { num: '02', title: 'La Filosofía', text: 'Primero el producto, siempre la estación. Gestos precisos, cocciones pacientes, elegancia sin ostentación.' },
+        { num: '03', title: 'La Brigada', text: 'Un equipo unido, formado en la exigencia de las grandes casas, movido por el mismo fuego: recibir, deleitar, emocionar.' },
+      ],
+      captions: ['La cocina, de noche', 'El gesto', 'El pase'],
     },
   },
 }
