@@ -7,12 +7,17 @@ import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { asset } from '../asset'
 
-export default function ProductObject({ index, name }) {
+export default function ProductObject({ index, name, image, video }) {
   const stageRef = useRef(null)
   const floatRef = useRef(null)
   const videoRef = useRef(null)
   const [videoOk, setVideoOk] = useState(true)
   const [imgOk, setImgOk] = useState(true)
+
+  // Absolute (CDN) URLs are used as-is; otherwise fall back to a self-hosted
+  // file under /products/ resolved against the deploy base path.
+  const videoSrc = video || asset(`/products/product-${index}-360.mp4`)
+  const imgSrc = image || asset(`/products/product-${index}.webp`)
 
   const finePointer =
     typeof window !== 'undefined' && window.matchMedia('(pointer: fine)').matches
@@ -57,7 +62,8 @@ export default function ProductObject({ index, name }) {
           <video
             ref={videoRef}
             className="product-media"
-            src={asset(`/products/product-${index}-360.mp4`)}
+            src={videoSrc}
+            poster={imgOk ? imgSrc : undefined}
             muted loop playsInline preload="metadata"
             aria-label={`${name} — rotation 360°`}
             onError={() => setVideoOk(false)}
@@ -65,7 +71,7 @@ export default function ProductObject({ index, name }) {
         ) : imgOk ? (
           <img
             className="product-media"
-            src={asset(`/products/product-${index}.webp`)}
+            src={imgSrc}
             alt={name}
             loading="lazy"
             onError={() => setImgOk(false)}

@@ -4,6 +4,7 @@
 // description, discreet price and an order CTA.
 import PageShell from '../components/PageShell'
 import ProductObject from '../components/ProductObject'
+import { PRODUCT_MEDIA } from '../config/productMedia'
 
 export default function BoutiquePage({ tr, lang, setLang, onReserve }) {
   const c = tr.boutique
@@ -23,7 +24,12 @@ export default function BoutiquePage({ tr, lang, setLang, onReserve }) {
         <div className="boutique-list">
           {c.items.map((p, i) => (
             <article className={`product-row ${i % 2 ? 'product-row--rev' : ''}`} key={p.id} data-reveal>
-              <ProductObject index={p.id} name={p.name} />
+              <ProductObject
+                index={p.id}
+                name={p.name}
+                image={PRODUCT_MEDIA[p.id]?.image}
+                video={PRODUCT_MEDIA[p.id]?.video}
+              />
               <div className="product-info">
                 <span className="product-info__index label label--gold">0{i + 1}</span>
                 <h2 className="product-info__name">{p.name}</h2>

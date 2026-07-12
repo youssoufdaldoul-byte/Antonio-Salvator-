@@ -5,6 +5,7 @@
 import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { asset } from '../asset'
+import { PRODUCT_MEDIA } from '../config/productMedia'
 
 // type 'section' → id on the home page · type 'route' → router path
 const NAV = [
@@ -24,7 +25,7 @@ const PREVIEWS = {
   maison: { src: '/images/kitchen-scene.webp', fallback: '/images/detail-bar.webp', label: 'La cuisine' },
   tables: { src: '/images/table-vue.webp', fallback: '/images/detail-table.webp', label: 'Les tables' },
   maisons: { src: '/images/house-monaco.webp', fallback: '/images/terrace-night.webp', label: 'Nos maisons' },
-  boutique: { src: '/products/product-1.webp', fallback: '/images/detail-bar.webp', label: 'La boutique' },
+  boutique: { src: PRODUCT_MEDIA[1]?.image || '/products/product-1.webp', fallback: '/images/detail-bar.webp', label: 'La boutique' },
   events: { src: '/images/event-harbour.webp', fallback: '/images/terrace-night.webp', label: 'Événements' },
   press: { src: '/images/kitchen-pass.webp', fallback: '/images/interior-hall.webp', label: 'Presse' },
   menu: { src: '/images/dish-2.webp', label: 'Les plats' },
