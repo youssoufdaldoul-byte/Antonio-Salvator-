@@ -104,6 +104,7 @@ video {
   z-index: 2;
   pointer-events: none;
   opacity: 0.5;
+  overflow: hidden; /* contain the oversized ::after grain (inset:-50%) */
 }
 .bg-grain canvas {
   width: 100%;
@@ -130,6 +131,11 @@ video {
 .site-content {
   position: relative;
   z-index: 10;
+  /* Contain decorative oversized type (.maison__bigtype, .ambiance__words)
+     that used to push a ~163px horizontal scroll on mobile. `clip` clips
+     without creating a scroll container, so Lenis + sticky are unaffected. */
+  overflow-x: hidden; /* fallback for browsers without clip */
+  overflow-x: clip;
 }
 
 /* ------------------------------------------------------------
@@ -1466,13 +1472,29 @@ h1, h2, h3 {
    ------------------------------------------------------------ */
 
 @media (max-width: 760px) {
+  .header {
+    padding: 1rem 1.1rem;
+  }
   .header .lang-switch {
     display: none; /* the footer switcher remains */
   }
+  /* Compact the logo lockup so brand + RÉSERVER + burger never collide. */
+  .header__brand {
+    font-size: 0.82rem;
+    letter-spacing: 0.18em;
+  }
+  .header__side {
+    gap: 0.55rem;
+  }
   .header__reserve {
     display: inline-flex;
-    padding: 0.6em 1.2em;
-    font-size: 0.68rem;
+    padding: 0.55em 1em;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+  }
+  .burger {
+    width: 46px;
+    height: 46px;
   }
   .resa-form__grid {
     grid-template-columns: 1fr;
