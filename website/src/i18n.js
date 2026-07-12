@@ -17,7 +17,7 @@ export const t = {
   // FRANÇAIS (primary)
   // ==========================================================
   fr: {
-    nav: { home: 'Accueil', experience: "L'Expérience", maison: 'La Maison', menu: 'Le Menu', ambiance: 'Ambiance', reserve: 'Réserver', tables: 'Les Tables' , maisons: 'Nos Maisons', boutique: 'La Boutique', events: 'Événements' },
+    nav: { home: 'Accueil', experience: "L'Expérience", maison: 'La Maison', menu: 'Le Menu', ambiance: 'Ambiance', reserve: 'Réserver', tables: 'Les Tables' , maisons: 'Nos Maisons', boutique: 'La Boutique', events: 'Événements', press: 'Presse' },
     hero: {
       kicker: 'Monaco — Riviera',
       title: 'MAISON LUMIÈRE',
@@ -159,13 +159,23 @@ export const t = {
         { key: 'nye', month: 'Décembre', name: 'Réveillon', img: 'festive', desc: "Le dernier soir de l'année, célébré comme il se doit.", offer: 'Réveillon 7 services · minuit doré' },
       ],
     },
+    press: {
+      label: 'Presse', title: 'On en parle',
+      intro: "Ce que la critique retient d'Antonio Salvatore et de sa table.",
+      readCta: "Lire l'article", logos: ['Riviera Gourmet', 'Le Sel & la Plume', 'Corriere del Gusto', 'Monaco Soir', 'Palais & Papilles', 'La Table Guide'],
+      articles: [
+        { source: 'Riviera Gourmet', date: '2025', quote: "Une des plus belles tables de la Principauté : précise, généreuse, profondément italienne." },
+        { source: 'Le Sel & la Plume', date: '2024', quote: "Antonio Salvatore impose une signature rare, entre mémoire du Sud et rigueur d'étoilé." },
+        { source: 'Corriere del Gusto', date: '2024', quote: "Il talento di uno chef che racconta l'Italia con un'eleganza sobria et lumineuse." },
+      ],
+    },
   },
 
   // ==========================================================
   // ENGLISH
   // ==========================================================
   en: {
-    nav: { home: 'Home', experience: 'The Experience', maison: 'The House', menu: 'The Menu', ambiance: 'Ambiance', reserve: 'Reserve', tables: 'The Tables' , maisons: 'Our Houses', boutique: 'The Boutique', events: 'Events' },
+    nav: { home: 'Home', experience: 'The Experience', maison: 'The House', menu: 'The Menu', ambiance: 'Ambiance', reserve: 'Reserve', tables: 'The Tables' , maisons: 'Our Houses', boutique: 'The Boutique', events: 'Events', press: 'Press' },
     hero: {
       kicker: 'Monaco — Riviera', title: 'MAISON LUMIÈRE', tagline: 'The art of hosting.',
       sub: 'An exceptional address in Monaco.', cta: 'Reserve', scroll: 'Scroll to enter',
@@ -298,13 +308,23 @@ export const t = {
         { key: 'nye', month: 'December', name: "New Year's Eve", img: 'festive', desc: 'The last night of the year, celebrated as it should be.', offer: '7-course NYE · golden midnight' },
       ],
     },
+    press: {
+      label: 'Press', title: 'In the press',
+      intro: 'What the critics remember of Antonio Salvatore and his table.',
+      readCta: 'Read the article', logos: ['Riviera Gourmet', 'Le Sel & la Plume', 'Corriere del Gusto', 'Monaco Soir', 'Palais & Papilles', 'La Table Guide'],
+      articles: [
+        { source: 'Riviera Gourmet', date: '2025', quote: 'One of the finest tables in the Principality: precise, generous, deeply Italian.' },
+        { source: 'Le Sel & la Plume', date: '2024', quote: 'Antonio Salvatore sets a rare signature, between southern memory and starred rigour.' },
+        { source: 'Corriere del Gusto', date: '2024', quote: 'The talent of a chef who tells Italy with a sober, luminous elegance.' },
+      ],
+    },
   },
 
   // ==========================================================
   // ITALIANO
   // ==========================================================
   it: {
-    nav: { home: 'Home', experience: "L'Esperienza", maison: 'La Maison', menu: 'Il Menu', ambiance: 'Atmosfera', reserve: 'Prenotare', tables: 'I Tavoli' , maisons: 'Le Nostre Case', boutique: 'La Boutique', events: 'Eventi' },
+    nav: { home: 'Home', experience: "L'Esperienza", maison: 'La Maison', menu: 'Il Menu', ambiance: 'Atmosfera', reserve: 'Prenotare', tables: 'I Tavoli' , maisons: 'Le Nostre Case', boutique: 'La Boutique', events: 'Eventi', press: 'Stampa' },
     hero: {
       kicker: 'Monaco — Riviera', title: 'MAISON LUMIÈRE', tagline: "L'arte dell'accoglienza.",
       sub: 'Un indirizzo d’eccezione a Monaco.', cta: 'Prenotare', scroll: 'Scorri per entrare',
@@ -437,13 +457,23 @@ export const t = {
         { key: 'nye', month: 'Dicembre', name: 'Capodanno', img: 'festive', desc: "L'ultima sera dell'anno, celebrata come si deve.", offer: 'Cenone 7 portate · mezzanotte dorata' },
       ],
     },
+    press: {
+      label: 'Stampa', title: 'Se ne parla',
+      intro: "Ciò che la critica ricorda di Antonio Salvatore e della sua tavola.",
+      readCta: "Leggi l'articolo", logos: ['Riviera Gourmet', 'Le Sel & la Plume', 'Corriere del Gusto', 'Monaco Soir', 'Palais & Papilles', 'La Table Guide'],
+      articles: [
+        { source: 'Riviera Gourmet', date: '2025', quote: 'Una delle più belle tavole del Principato: precisa, generosa, profondamente italiana.' },
+        { source: 'Le Sel & la Plume', date: '2024', quote: 'Antonio Salvatore impone una firma rara, tra memoria del Sud e rigore da stella.' },
+        { source: 'Corriere del Gusto', date: '2024', quote: "Il talento di uno chef che racconta l'Italia con un'eleganza sobria e luminosa." },
+      ],
+    },
   },
 
   // ==========================================================
   // РУССКИЙ
   // ==========================================================
   ru: {
-    nav: { home: 'Главная', experience: 'Опыт', maison: 'Дом', menu: 'Меню', ambiance: 'Атмосфера', reserve: 'Бронь', tables: 'Столы' , maisons: 'Наши дома', boutique: 'Бутик', events: 'События' },
+    nav: { home: 'Главная', experience: 'Опыт', maison: 'Дом', menu: 'Меню', ambiance: 'Атмосфера', reserve: 'Бронь', tables: 'Столы' , maisons: 'Наши дома', boutique: 'Бутик', events: 'События', press: 'Пресса' },
     hero: {
       kicker: 'Монако — Ривьера', title: 'MAISON LUMIÈRE', tagline: 'Искусство гостеприимства.',
       sub: 'Исключительный адрес в Монако.', cta: 'Забронировать', scroll: 'Листайте, чтобы войти',
@@ -576,13 +606,23 @@ export const t = {
         { key: 'nye', month: 'Декабрь', name: 'Новогодняя ночь', img: 'festive', desc: 'Последний вечер года, отмеченный как подобает.', offer: 'Новый год · 7 подач · золотая полночь' },
       ],
     },
+    press: {
+      label: 'Пресса', title: 'О нас пишут',
+      intro: 'Что критика отмечает в Антонио Сальваторе и его кухне.',
+      readCta: 'Читать статью', logos: ['Riviera Gourmet', 'Le Sel & la Plume', 'Corriere del Gusto', 'Monaco Soir', 'Palais & Papilles', 'La Table Guide'],
+      articles: [
+        { source: 'Riviera Gourmet', date: '2025', quote: 'Один из лучших столов Княжества: точный, щедрый, глубоко итальянский.' },
+        { source: 'Le Sel & la Plume', date: '2024', quote: 'Антонио Сальваторе задаёт редкий почерк — память Юга и строгость звезды.' },
+        { source: 'Corriere del Gusto', date: '2024', quote: 'Талант шефа, рассказывающего Италию со сдержанной, светлой элегантностью.' },
+      ],
+    },
   },
 
   // ==========================================================
   // DEUTSCH
   // ==========================================================
   de: {
-    nav: { home: 'Start', experience: 'Das Erlebnis', maison: 'Das Haus', menu: 'Die Karte', ambiance: 'Ambiente', reserve: 'Reservieren', tables: 'Die Tische' , maisons: 'Unsere Häuser', boutique: 'Die Boutique', events: 'Events' },
+    nav: { home: 'Start', experience: 'Das Erlebnis', maison: 'Das Haus', menu: 'Die Karte', ambiance: 'Ambiente', reserve: 'Reservieren', tables: 'Die Tische' , maisons: 'Unsere Häuser', boutique: 'Die Boutique', events: 'Events', press: 'Presse' },
     hero: {
       kicker: 'Monaco — Riviera', title: 'MAISON LUMIÈRE', tagline: 'Die Kunst des Empfangens.',
       sub: 'Eine außergewöhnliche Adresse in Monaco.', cta: 'Reservieren', scroll: 'Scrollen Sie, um einzutreten',
@@ -715,13 +755,23 @@ export const t = {
         { key: 'nye', month: 'Dezember', name: 'Silvester', img: 'festive', desc: 'Der letzte Abend des Jahres, gefeiert wie es sich gehört.', offer: '7-Gänge-Silvester · goldene Mitternacht' },
       ],
     },
+    press: {
+      label: 'Presse', title: 'Man spricht darüber',
+      intro: 'Was die Kritik an Antonio Salvatore und seiner Tafel hervorhebt.',
+      readCta: 'Artikel lesen', logos: ['Riviera Gourmet', 'Le Sel & la Plume', 'Corriere del Gusto', 'Monaco Soir', 'Palais & Papilles', 'La Table Guide'],
+      articles: [
+        { source: 'Riviera Gourmet', date: '2025', quote: 'Eine der schönsten Tafeln des Fürstentums: präzise, großzügig, zutiefst italienisch.' },
+        { source: 'Le Sel & la Plume', date: '2024', quote: 'Antonio Salvatore setzt eine seltene Handschrift, zwischen Erinnerung des Südens und Sternerigor.' },
+        { source: 'Corriere del Gusto', date: '2024', quote: 'Das Talent eines Küchenchefs, der Italien mit schlichter, leuchtender Eleganz erzählt.' },
+      ],
+    },
   },
 
   // ==========================================================
   // ESPAÑOL
   // ==========================================================
   es: {
-    nav: { home: 'Inicio', experience: 'La Experiencia', maison: 'La Casa', menu: 'La Carta', ambiance: 'Ambiente', reserve: 'Reservar', tables: 'Las Mesas' , maisons: 'Nuestras Casas', boutique: 'La Boutique', events: 'Eventos' },
+    nav: { home: 'Inicio', experience: 'La Experiencia', maison: 'La Casa', menu: 'La Carta', ambiance: 'Ambiente', reserve: 'Reservar', tables: 'Las Mesas' , maisons: 'Nuestras Casas', boutique: 'La Boutique', events: 'Eventos', press: 'Prensa' },
     hero: {
       kicker: 'Mónaco — Riviera', title: 'MAISON LUMIÈRE', tagline: 'El arte de recibir.',
       sub: 'Una dirección excepcional en Mónaco.', cta: 'Reservar', scroll: 'Desplázate para entrar',
@@ -852,6 +902,16 @@ export const t = {
         { key: 'yacht', month: 'Septiembre', name: 'Yacht Show', img: 'harbour', desc: 'El puerto se viste de gigantes. Una carta marina, junto al agua.', offer: 'Cena armadores · maridaje champán' },
         { key: 'fete', month: 'Noviembre', name: 'Fiesta Nacional', img: 'festive', desc: 'El Principado se ilumina. Una velada de gala, bajo las luces.', offer: 'Menú de gala · fuegos artificiales' },
         { key: 'nye', month: 'Diciembre', name: 'Nochevieja', img: 'festive', desc: 'La última noche del año, celebrada como se debe.', offer: 'Nochevieja 7 platos · medianoche dorada' },
+      ],
+    },
+    press: {
+      label: 'Prensa', title: 'Se habla de ello',
+      intro: 'Lo que la crítica retiene de Antonio Salvatore y su mesa.',
+      readCta: 'Leer el artículo', logos: ['Riviera Gourmet', 'Le Sel & la Plume', 'Corriere del Gusto', 'Monaco Soir', 'Palais & Papilles', 'La Table Guide'],
+      articles: [
+        { source: 'Riviera Gourmet', date: '2025', quote: 'Una de las mejores mesas del Principado: precisa, generosa, profundamente italiana.' },
+        { source: 'Le Sel & la Plume', date: '2024', quote: 'Antonio Salvatore impone una firma singular, entre memoria del Sur y rigor de estrella.' },
+        { source: 'Corriere del Gusto', date: '2024', quote: 'El talento de un chef que narra Italia con una elegancia sobria y luminosa.' },
       ],
     },
   },

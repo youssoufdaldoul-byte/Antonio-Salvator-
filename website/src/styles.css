@@ -2589,3 +2589,85 @@ h1, h2, h3 {
   .tl-item__cta,
   .tl-item--right .tl-item__cta { align-self: flex-start; }
 }
+
+/* ------------------------------------------------------------
+   Page · Presse — sober, typography-led
+   ------------------------------------------------------------ */
+
+.press-hero { padding-bottom: clamp(1.5rem, 4vh, 3rem); }
+
+.press-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.4rem, 4vw, 3.2rem);
+  margin: 0 clamp(1.2rem, 6vw, 6rem) clamp(3rem, 7vh, 5rem);
+  padding: clamp(1.4rem, 3vw, 2rem) 0;
+  border-top: 1px solid rgba(184, 151, 74, 0.16);
+  border-bottom: 1px solid rgba(184, 151, 74, 0.16);
+}
+.press-logo {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
+  letter-spacing: 0.04em;
+  color: var(--text-dim);
+  opacity: 0.75;
+  transition: color 0.4s, opacity 0.4s;
+}
+.press-logo:hover {
+  color: var(--amber-2);
+  opacity: 1;
+}
+
+.press-list {
+  max-width: 880px;
+  margin: 0 auto clamp(4rem, 9vh, 6rem);
+  padding: 0 clamp(1.2rem, 6vw, 2rem);
+  display: flex;
+  flex-direction: column;
+}
+.press-article {
+  padding: clamp(2rem, 5vh, 3.4rem) 0;
+  border-bottom: 1px solid rgba(184, 151, 74, 0.14);
+}
+.press-article:first-child { border-top: 1px solid rgba(184, 151, 74, 0.14); }
+.press-article__meta {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.press-article__source {
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--amber-2);
+}
+.press-article__date {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  color: var(--text-dim);
+}
+.press-article__quote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.8vw, 2rem);
+  line-height: 1.4;
+  color: var(--text);
+  margin-bottom: 1.2rem;
+}
+.press-article__link {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border-bottom: 1px solid rgba(184, 151, 74, 0.35);
+  padding-bottom: 0.2em;
+  transition: color 0.4s, border-color 0.4s;
+}
+.press-article__link:hover {
+  color: var(--amber-2);
+  border-color: var(--amber-2);
+}

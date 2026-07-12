@@ -16,6 +16,7 @@ import TablesPage from './pages/TablesPage'
 import MaisonsPage from './pages/MaisonsPage'
 import BoutiquePage from './pages/BoutiquePage'
 import EventsPage from './pages/EventsPage'
+import PressPage from './pages/PressPage'
 
 function Shell() {
   const videoRef = useRef(null)
@@ -115,6 +116,10 @@ function Shell() {
         <Route
           path="/evenements"
           element={<EventsPage tr={tr} lang={lang} setLang={setLang} onReserve={onReserve} />}
+        />
+        <Route
+          path="/presse"
+          element={<PressPage tr={tr} lang={lang} setLang={setLang} />}
         />
       </Routes>
     </>
