@@ -46,7 +46,7 @@ export default function Home({ tr, lang, setLang, videoRef, onReserve }) {
         <Maison tr={tr} />
         <MenuSection tr={tr} lang={lang} />
         <Ambiance tr={tr} />
-        <Reservation tr={tr} />
+        <Reservation tr={tr} tableRequest={location.state?.table || ''} />
         <Reviews tr={tr} />
         <Footer tr={tr} lang={lang} setLang={setLang} />
       </main>

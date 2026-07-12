@@ -17,7 +17,7 @@ export const t = {
   // FRANÇAIS (primary)
   // ==========================================================
   fr: {
-    nav: { home: 'Accueil', experience: "L'Expérience", maison: 'La Maison', menu: 'Le Menu', ambiance: 'Ambiance', reserve: 'Réserver' },
+    nav: { home: 'Accueil', experience: "L'Expérience", maison: 'La Maison', menu: 'Le Menu', ambiance: 'Ambiance', reserve: 'Réserver', tables: 'Les Tables'  },
     hero: {
       kicker: 'Monaco — Riviera',
       title: 'MAISON LUMIÈRE',
@@ -114,13 +114,27 @@ export const t = {
       ],
       captions: ['La cuisine, le soir', 'Le geste', 'Le passe'],
     },
+    tables: {
+      label: 'Les Tables', title: 'Choisissez votre table',
+      intro: "Chaque table de la salle a son caractère. Survolez le plan, choisissez votre atmosphère — la maison s'occupe du reste.",
+      hint: 'Survolez ou touchez une table',
+      capacity: 'couverts', standardLabel: 'Soir ordinaire', gpLabel: 'Grand Prix F1',
+      reserveCta: 'Réserver cette table', requestNote: 'Demande envoyée avec votre table en préférence.',
+      items: [
+        { id: 'alcove', name: "L'Alcôve", desc: 'Un écrin à l’écart, éclairé à la bougie.', ambiance: 'Intime', capacity: 2, standard: 'À la carte', gp: '450 € / pers.' },
+        { id: 'rotonde', name: 'La Rotonde', desc: 'Au cœur de la salle, sous le grand lustre.', ambiance: 'Théâtral', capacity: 4, standard: 'À la carte', gp: '550 € / pers.' },
+        { id: 'vue', name: 'La Table Vue', desc: 'La baie sur la place, lumières de nuit.', ambiance: 'Panorama', capacity: 4, standard: 'À la carte', gp: '690 € / pers.' },
+        { id: 'salon', name: 'Le Salon Privé', desc: 'Un salon fermé, service dédié.', ambiance: 'Confidentiel', capacity: 8, standard: 'Menu Dégustation', gp: 'Sur demande' },
+        { id: 'passe', name: 'La Table du Passe', desc: 'Face à la brigade, au plus près du feu.', ambiance: 'Immersif', capacity: 6, standard: 'Menu Dégustation', gp: '590 € / pers.' },
+      ],
+    },
   },
 
   // ==========================================================
   // ENGLISH
   // ==========================================================
   en: {
-    nav: { home: 'Home', experience: 'The Experience', maison: 'The House', menu: 'The Menu', ambiance: 'Ambiance', reserve: 'Reserve' },
+    nav: { home: 'Home', experience: 'The Experience', maison: 'The House', menu: 'The Menu', ambiance: 'Ambiance', reserve: 'Reserve', tables: 'The Tables'  },
     hero: {
       kicker: 'Monaco — Riviera', title: 'MAISON LUMIÈRE', tagline: 'The art of hosting.',
       sub: 'An exceptional address in Monaco.', cta: 'Reserve', scroll: 'Scroll to enter',
@@ -208,13 +222,27 @@ export const t = {
       ],
       captions: ['The kitchen at night', 'The gesture', 'The pass'],
     },
+    tables: {
+      label: 'The Tables', title: 'Choose your table',
+      intro: 'Every table in the room has its own character. Hover the plan, choose your atmosphere — the house takes care of the rest.',
+      hint: 'Hover or tap a table',
+      capacity: 'guests', standardLabel: 'Regular evening', gpLabel: 'F1 Grand Prix',
+      reserveCta: 'Reserve this table', requestNote: 'Request sent with your table as preference.',
+      items: [
+        { id: 'alcove', name: 'The Alcove', desc: 'A secluded nook, lit by candlelight.', ambiance: 'Intimate', capacity: 2, standard: 'À la carte', gp: '€450 / guest' },
+        { id: 'rotonde', name: 'The Rotunda', desc: 'At the heart of the room, under the chandelier.', ambiance: 'Theatrical', capacity: 4, standard: 'À la carte', gp: '€550 / guest' },
+        { id: 'vue', name: 'The View Table', desc: 'The bay window over the square, night lights.', ambiance: 'Panorama', capacity: 4, standard: 'À la carte', gp: '€690 / guest' },
+        { id: 'salon', name: 'The Private Salon', desc: 'A closed salon with dedicated service.', ambiance: 'Confidential', capacity: 8, standard: 'Tasting menu', gp: 'On request' },
+        { id: 'passe', name: "The Chef's Pass", desc: 'Facing the brigade, closest to the fire.', ambiance: 'Immersive', capacity: 6, standard: 'Tasting menu', gp: '€590 / guest' },
+      ],
+    },
   },
 
   // ==========================================================
   // ITALIANO
   // ==========================================================
   it: {
-    nav: { home: 'Home', experience: "L'Esperienza", maison: 'La Maison', menu: 'Il Menu', ambiance: 'Atmosfera', reserve: 'Prenotare' },
+    nav: { home: 'Home', experience: "L'Esperienza", maison: 'La Maison', menu: 'Il Menu', ambiance: 'Atmosfera', reserve: 'Prenotare', tables: 'I Tavoli'  },
     hero: {
       kicker: 'Monaco — Riviera', title: 'MAISON LUMIÈRE', tagline: "L'arte dell'accoglienza.",
       sub: 'Un indirizzo d’eccezione a Monaco.', cta: 'Prenotare', scroll: 'Scorri per entrare',
@@ -302,13 +330,27 @@ export const t = {
       ],
       captions: ['La cucina, la sera', 'Il gesto', 'Il pass'],
     },
+    tables: {
+      label: 'I Tavoli', title: 'Scegliete il vostro tavolo',
+      intro: 'Ogni tavolo della sala ha il suo carattere. Sfiorate la pianta, scegliete la vostra atmosfera — al resto pensa la maison.',
+      hint: 'Sfiorate o toccate un tavolo',
+      capacity: 'coperti', standardLabel: 'Serata ordinaria', gpLabel: 'Gran Premio F1',
+      reserveCta: 'Prenotare questo tavolo', requestNote: 'Richiesta inviata con il tavolo come preferenza.',
+      items: [
+        { id: 'alcove', name: "L'Alcova", desc: 'Uno scrigno appartato, a lume di candela.', ambiance: 'Intimo', capacity: 2, standard: 'Alla carta', gp: '450 € / pers.' },
+        { id: 'rotonde', name: 'La Rotonda', desc: 'Nel cuore della sala, sotto il lampadario.', ambiance: 'Teatrale', capacity: 4, standard: 'Alla carta', gp: '550 € / pers.' },
+        { id: 'vue', name: 'Il Tavolo Vista', desc: 'La vetrata sulla piazza, luci notturne.', ambiance: 'Panorama', capacity: 4, standard: 'Alla carta', gp: '690 € / pers.' },
+        { id: 'salon', name: 'Il Salotto Privato', desc: 'Un salotto riservato, servizio dedicato.', ambiance: 'Riservato', capacity: 8, standard: 'Menu degustazione', gp: 'Su richiesta' },
+        { id: 'passe', name: 'Il Tavolo del Pass', desc: 'Di fronte alla brigata, vicino al fuoco.', ambiance: 'Immersivo', capacity: 6, standard: 'Menu degustazione', gp: '590 € / pers.' },
+      ],
+    },
   },
 
   // ==========================================================
   // РУССКИЙ
   // ==========================================================
   ru: {
-    nav: { home: 'Главная', experience: 'Опыт', maison: 'Дом', menu: 'Меню', ambiance: 'Атмосфера', reserve: 'Бронь' },
+    nav: { home: 'Главная', experience: 'Опыт', maison: 'Дом', menu: 'Меню', ambiance: 'Атмосфера', reserve: 'Бронь', tables: 'Столы'  },
     hero: {
       kicker: 'Монако — Ривьера', title: 'MAISON LUMIÈRE', tagline: 'Искусство гостеприимства.',
       sub: 'Исключительный адрес в Монако.', cta: 'Забронировать', scroll: 'Листайте, чтобы войти',
@@ -396,13 +438,27 @@ export const t = {
       ],
       captions: ['Кухня вечером', 'Жест', 'Пасс'],
     },
+    tables: {
+      label: 'Столы', title: 'Выберите свой стол',
+      intro: 'У каждого стола в зале свой характер. Наведите курсор на план, выберите атмосферу — об остальном позаботится дом.',
+      hint: 'Наведите или коснитесь стола',
+      capacity: 'гостей', standardLabel: 'Обычный вечер', gpLabel: 'Гран-при F1',
+      reserveCta: 'Забронировать этот стол', requestNote: 'Запрос отправлен с указанием выбранного стола.',
+      items: [
+        { id: 'alcove', name: 'Альков', desc: 'Уединённый уголок при свечах.', ambiance: 'Интимно', capacity: 2, standard: 'À la carte', gp: '450 € / гость' },
+        { id: 'rotonde', name: 'Ротонда', desc: 'В сердце зала, под большой люстрой.', ambiance: 'Театрально', capacity: 4, standard: 'À la carte', gp: '550 € / гость' },
+        { id: 'vue', name: 'Стол у окна', desc: 'Витраж на площадь, ночные огни.', ambiance: 'Панорама', capacity: 4, standard: 'À la carte', gp: '690 € / гость' },
+        { id: 'salon', name: 'Приватный салон', desc: 'Закрытый салон, персональный сервис.', ambiance: 'Конфиденциально', capacity: 8, standard: 'Дегустационное меню', gp: 'По запросу' },
+        { id: 'passe', name: 'Стол у пасса', desc: 'Лицом к бригаде, ближе всех к огню.', ambiance: 'Погружение', capacity: 6, standard: 'Дегустационное меню', gp: '590 € / гость' },
+      ],
+    },
   },
 
   // ==========================================================
   // DEUTSCH
   // ==========================================================
   de: {
-    nav: { home: 'Start', experience: 'Das Erlebnis', maison: 'Das Haus', menu: 'Die Karte', ambiance: 'Ambiente', reserve: 'Reservieren' },
+    nav: { home: 'Start', experience: 'Das Erlebnis', maison: 'Das Haus', menu: 'Die Karte', ambiance: 'Ambiente', reserve: 'Reservieren', tables: 'Die Tische'  },
     hero: {
       kicker: 'Monaco — Riviera', title: 'MAISON LUMIÈRE', tagline: 'Die Kunst des Empfangens.',
       sub: 'Eine außergewöhnliche Adresse in Monaco.', cta: 'Reservieren', scroll: 'Scrollen Sie, um einzutreten',
@@ -490,13 +546,27 @@ export const t = {
       ],
       captions: ['Die Küche am Abend', 'Die Geste', 'Der Pass'],
     },
+    tables: {
+      label: 'Die Tische', title: 'Wählen Sie Ihren Tisch',
+      intro: 'Jeder Tisch im Saal hat seinen Charakter. Fahren Sie über den Plan, wählen Sie Ihre Atmosphäre — um den Rest kümmert sich das Haus.',
+      hint: 'Tisch berühren oder überfahren',
+      capacity: 'Gedecke', standardLabel: 'Gewöhnlicher Abend', gpLabel: 'F1 Grand Prix',
+      reserveCta: 'Diesen Tisch reservieren', requestNote: 'Anfrage mit Ihrem Wunschtisch gesendet.',
+      items: [
+        { id: 'alcove', name: 'Die Alkove', desc: 'Ein abgeschiedenes Refugium bei Kerzenlicht.', ambiance: 'Intim', capacity: 2, standard: 'À la carte', gp: '450 € / Gast' },
+        { id: 'rotonde', name: 'Die Rotunde', desc: 'Im Herzen des Saals, unter dem Lüster.', ambiance: 'Theatralisch', capacity: 4, standard: 'À la carte', gp: '550 € / Gast' },
+        { id: 'vue', name: 'Der Aussichtstisch', desc: 'Das Fenster zum Platz, Lichter der Nacht.', ambiance: 'Panorama', capacity: 4, standard: 'À la carte', gp: '690 € / Gast' },
+        { id: 'salon', name: 'Der Private Salon', desc: 'Ein geschlossener Salon, eigener Service.', ambiance: 'Vertraulich', capacity: 8, standard: 'Degustationsmenü', gp: 'Auf Anfrage' },
+        { id: 'passe', name: 'Der Tisch am Pass', desc: 'Der Brigade gegenüber, dem Feuer am nächsten.', ambiance: 'Immersiv', capacity: 6, standard: 'Degustationsmenü', gp: '590 € / Gast' },
+      ],
+    },
   },
 
   // ==========================================================
   // ESPAÑOL
   // ==========================================================
   es: {
-    nav: { home: 'Inicio', experience: 'La Experiencia', maison: 'La Casa', menu: 'La Carta', ambiance: 'Ambiente', reserve: 'Reservar' },
+    nav: { home: 'Inicio', experience: 'La Experiencia', maison: 'La Casa', menu: 'La Carta', ambiance: 'Ambiente', reserve: 'Reservar', tables: 'Las Mesas'  },
     hero: {
       kicker: 'Mónaco — Riviera', title: 'MAISON LUMIÈRE', tagline: 'El arte de recibir.',
       sub: 'Una dirección excepcional en Mónaco.', cta: 'Reservar', scroll: 'Desplázate para entrar',
@@ -583,6 +653,20 @@ export const t = {
         { num: '03', title: 'La Brigada', text: 'Un equipo unido, formado en la exigencia de las grandes casas, movido por el mismo fuego: recibir, deleitar, emocionar.' },
       ],
       captions: ['La cocina, de noche', 'El gesto', 'El pase'],
+    },
+    tables: {
+      label: 'Las Mesas', title: 'Elija su mesa',
+      intro: 'Cada mesa de la sala tiene su carácter. Recorra el plano, elija su atmósfera — la casa se ocupa del resto.',
+      hint: 'Pase o toque una mesa',
+      capacity: 'comensales', standardLabel: 'Noche ordinaria', gpLabel: 'Gran Premio F1',
+      reserveCta: 'Reservar esta mesa', requestNote: 'Solicitud enviada con su mesa como preferencia.',
+      items: [
+        { id: 'alcove', name: 'La Alcoba', desc: 'Un rincón apartado, a la luz de las velas.', ambiance: 'Íntimo', capacity: 2, standard: 'A la carta', gp: '450 € / pers.' },
+        { id: 'rotonde', name: 'La Rotonda', desc: 'En el corazón de la sala, bajo la lámpara.', ambiance: 'Teatral', capacity: 4, standard: 'A la carta', gp: '550 € / pers.' },
+        { id: 'vue', name: 'La Mesa Vista', desc: 'El ventanal a la plaza, luces nocturnas.', ambiance: 'Panorama', capacity: 4, standard: 'A la carta', gp: '690 € / pers.' },
+        { id: 'salon', name: 'El Salón Privado', desc: 'Un salón cerrado, servicio dedicado.', ambiance: 'Confidencial', capacity: 8, standard: 'Menú degustación', gp: 'Bajo petición' },
+        { id: 'passe', name: 'La Mesa del Pase', desc: 'Frente a la brigada, junto al fuego.', ambiance: 'Inmersivo', capacity: 6, standard: 'Menú degustación', gp: '590 € / pers.' },
+      ],
     },
   },
 }

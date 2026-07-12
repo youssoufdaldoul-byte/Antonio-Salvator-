@@ -79,3 +79,14 @@ Download the PNGs, then from `website/`: drop them in `public/images/` as
 `kitchen-scene.png` etc. and run `node scripts/optimize-images.mjs` to get the
 `.webp` versions the page expects. Until then the page falls back to existing
 ambiance photography.
+
+## Page · Les Tables (floor plan ambiances) — Nano Banana Pro 2K → `website/public/images/`
+
+| Path | Job ID | File |
+|---|---|---|
+| `images/table-alcove.webp` (4:5) — L'Alcôve | `0805adf2-57f4-436a-b01b-c079ba9e4ce3` | `hf_20260711_183659_0805adf2-57f4-436a-b01b-c079ba9e4ce3.png` |
+| `images/table-vue.webp` (4:5) — La Table Vue | `10e9f550-192f-49e9-9fd3-d934a3cb42f1` | `hf_20260711_183717_10e9f550-192f-49e9-9fd3-d934a3cb42f1.png` |
+| `images/table-salle.webp` (16:9) — Salle / Rotonde / Salon / Passe | `11d12602-1c42-422c-bc54-dcf0041b4719` | `hf_20260711_183733_11d12602-1c42-422c-bc54-dcf0041b4719.png` |
+
+Same flow: download PNGs → `public/images/table-alcove.png` etc. →
+`node scripts/optimize-images.mjs`. Fallbacks to existing photography until then.

@@ -12,6 +12,7 @@ import Header from './components/Header'
 import FullscreenMenu from './components/FullscreenMenu'
 import Home from './pages/Home'
 import MaisonPage from './pages/MaisonPage'
+import TablesPage from './pages/TablesPage'
 
 function Shell() {
   const videoRef = useRef(null)
@@ -58,6 +59,14 @@ function Shell() {
 
   const onReserve = useCallback(() => goSection('reservation'), [goSection])
 
+  // From Les Tables: carry the chosen table into the reservation form.
+  const onReserveTable = useCallback(
+    (tableName) => {
+      navigate('/', { state: { scrollTo: 'reservation', table: tableName } })
+    },
+    [navigate],
+  )
+
   return (
     <>
       <Particles />
@@ -87,6 +96,10 @@ function Shell() {
         <Route
           path="/maison"
           element={<MaisonPage tr={tr} lang={lang} setLang={setLang} onReserve={onReserve} />}
+        />
+        <Route
+          path="/tables"
+          element={<TablesPage tr={tr} lang={lang} setLang={setLang} onReserveTable={onReserveTable} />}
         />
       </Routes>
     </>

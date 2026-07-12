@@ -1,28 +1,13 @@
 // LA TABLE D'ANTONIO SALVATORE — Page · La Maison (the chef & the team)
 // Narrative cinematic page: journey, philosophy, brigade. Generated kitchen
 // imagery with graceful fallbacks to existing ambiance photography.
-import { useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useEffect, useRef } from 'react'
-import { asset } from '../asset'
 import PageShell from '../components/PageShell'
+import CineImage from '../components/CineImage'
 
 gsap.registerPlugin(ScrollTrigger)
-
-// Generated file → elegant fallback to an existing on-brand visual.
-function CineImage({ src, fallback, alt, className }) {
-  const [current, setCurrent] = useState(src)
-  return (
-    <img
-      className={className}
-      src={asset(current)}
-      alt={alt}
-      loading="lazy"
-      onError={() => current !== fallback && setCurrent(fallback)}
-    />
-  )
-}
 
 export default function MaisonPage({ tr, lang, setLang, onReserve }) {
   const c = tr.chef

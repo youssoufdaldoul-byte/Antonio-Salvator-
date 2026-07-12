@@ -5,7 +5,7 @@ import { asset } from '../asset'
 import { RESTAURANT } from '../config/restaurant'
 import ReservationForm from './ReservationForm'
 
-export default function Reservation({ tr }) {
+export default function Reservation({ tr, tableRequest = '' }) {
   const [imgOk, setImgOk] = useState(true)
 
   const scrollToForm = () => {
@@ -68,7 +68,11 @@ export default function Reservation({ tr }) {
       </div>
 
       <div id="resa-form" data-reveal>
-        <ReservationForm tr={tr} />
+        <ReservationForm
+          key={tableRequest || 'default'}
+          tr={tr}
+          initialMessage={tableRequest ? `${tr.tables.reserveCta} — ${tableRequest}` : ''}
+        />
       </div>
     </section>
   )

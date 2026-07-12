@@ -7,10 +7,10 @@ import { RESTAURANT } from '../config/restaurant'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 
-export default function ReservationForm({ tr }) {
+export default function ReservationForm({ tr, initialMessage = '' }) {
   const f = tr.form
   const [values, setValues] = useState({
-    date: '', time: '19:30', guests: '2', name: '', phone: '', email: '', message: '',
+    date: '', time: '19:30', guests: '2', name: '', phone: '', email: '', message: initialMessage,
   })
   const [errors, setErrors] = useState({})
   const [status, setStatus] = useState('idle') // idle | sending | success | error | unconfigured
