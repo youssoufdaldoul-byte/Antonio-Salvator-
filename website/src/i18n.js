@@ -17,7 +17,7 @@ export const t = {
   // FRANÇAIS (primary)
   // ==========================================================
   fr: {
-    nav: { home: 'Accueil', experience: "L'Expérience", maison: 'La Maison', menu: 'Le Menu', ambiance: 'Ambiance', reserve: 'Réserver', tables: 'Les Tables'  },
+    nav: { home: 'Accueil', experience: "L'Expérience", maison: 'La Maison', menu: 'Le Menu', ambiance: 'Ambiance', reserve: 'Réserver', tables: 'Les Tables' , maisons: 'Nos Maisons' },
     hero: {
       kicker: 'Monaco — Riviera',
       title: 'MAISON LUMIÈRE',
@@ -128,13 +128,40 @@ export const t = {
         { id: 'passe', name: 'La Table du Passe', desc: 'Face à la brigade, au plus près du feu.', ambiance: 'Immersif', capacity: 6, standard: 'Menu Dégustation', gp: '590 € / pers.' },
       ],
     },
+    maisons: {
+      label: 'Nuestras Casas', title: 'Dos direcciones, una firma',
+      intro: 'Del Principado a Manhattan: la misma exigencia italiana, dos atmósferas. Elija su noche.',
+      hoursLabel: 'Horario', addressLabel: 'Dirección', reserveCta: 'Reservar',
+      houses: [
+        { id: 'mc', city: 'Monte-Carlo', name: 'La Casa madre', desc: 'El estuche histórico, frente al puerto. Belle Époque, luz de velas, cocina de fuego.', address: '3 Avenue des Spélugues, 98000 Monaco', hours: 'Martes — Domingo · desde las 19:00', phone: '+377 93 30 70 44' },
+        { id: 'ny', city: 'Nueva York', name: 'La Table, Uptown', desc: 'La firma en las alturas, sobre las luces de Manhattan. Íntima, silenciosa, singular.', address: 'Reserva privada · Manhattan, NY', hours: 'Miércoles — Sábado · desde las 18:30', phone: 'Bajo petición' },
+      ],
+    },
+    maisons: {
+      label: 'Le Nostre Case', title: 'Due indirizzi, una sola firma',
+      intro: 'Dal Principato a Manhattan: la stessa esigenza italiana, due atmosfere. Scegliete la vostra sera.',
+      hoursLabel: 'Orari', addressLabel: 'Indirizzo', reserveCta: 'Prenotare',
+      houses: [
+        { id: 'mc', city: 'Monte-Carlo', name: 'La Casa madre', desc: 'Lo scrigno storico, di fronte al porto. Belle Époque, luce di candela, cucina di brace.', address: '3 Avenue des Spélugues, 98000 Monaco', hours: 'Martedì — Domenica · dalle 19:00', phone: '+377 93 30 70 44' },
+        { id: 'ny', city: 'New York', name: 'La Table, Uptown', desc: 'La firma in quota, sopra le luci di Manhattan. Intima, ovattata, rara.', address: 'Su prenotazione privata · Manhattan, NY', hours: 'Mercoledì — Sabato · dalle 18:30', phone: 'Su richiesta' },
+      ],
+    },
+    maisons: {
+      label: 'Nos Maisons', title: 'Deux adresses, une même signature',
+      intro: "De la Principauté à Manhattan, la même exigence italienne, deux atmosphères. Choisissez votre soir.",
+      hoursLabel: 'Horaires', addressLabel: 'Adresse', reserveCta: 'Réserver',
+      houses: [
+        { id: 'mc', city: 'Monte-Carlo', name: 'La Maison mère', desc: 'L’écrin historique, face au port. Belle Époque, lumière de bougie, cuisine de feu.', address: '3 Avenue des Spélugues, 98000 Monaco', hours: 'Mardi — Dimanche · dès 19h00', phone: '+377 93 30 70 44' },
+        { id: 'ny', city: 'New York', name: 'La Table, Uptown', desc: 'La signature en altitude, au-dessus des lumières de Manhattan. Intime, feutrée, rare.', address: 'Sur réservation privée · Manhattan, NY', hours: 'Du mercredi au samedi · dès 18h30', phone: 'Sur demande' },
+      ],
+    },
   },
 
   // ==========================================================
   // ENGLISH
   // ==========================================================
   en: {
-    nav: { home: 'Home', experience: 'The Experience', maison: 'The House', menu: 'The Menu', ambiance: 'Ambiance', reserve: 'Reserve', tables: 'The Tables'  },
+    nav: { home: 'Home', experience: 'The Experience', maison: 'The House', menu: 'The Menu', ambiance: 'Ambiance', reserve: 'Reserve', tables: 'The Tables' , maisons: 'Our Houses' },
     hero: {
       kicker: 'Monaco — Riviera', title: 'MAISON LUMIÈRE', tagline: 'The art of hosting.',
       sub: 'An exceptional address in Monaco.', cta: 'Reserve', scroll: 'Scroll to enter',
@@ -236,13 +263,22 @@ export const t = {
         { id: 'passe', name: "The Chef's Pass", desc: 'Facing the brigade, closest to the fire.', ambiance: 'Immersive', capacity: 6, standard: 'Tasting menu', gp: '€590 / guest' },
       ],
     },
+    maisons: {
+      label: 'Our Houses', title: 'Two addresses, one signature',
+      intro: 'From the Principality to Manhattan: the same Italian standard, two atmospheres. Choose your evening.',
+      hoursLabel: 'Hours', addressLabel: 'Address', reserveCta: 'Reserve',
+      houses: [
+        { id: 'mc', city: 'Monte-Carlo', name: 'The Original House', desc: 'The historic setting, facing the harbour. Belle Époque, candlelight, fire-driven cuisine.', address: '3 Avenue des Spélugues, 98000 Monaco', hours: 'Tuesday — Sunday · from 7:00 pm', phone: '+377 93 30 70 44' },
+        { id: 'ny', city: 'New York', name: 'The Table, Uptown', desc: 'The signature at altitude, above the lights of Manhattan. Intimate, hushed, rare.', address: 'By private reservation · Manhattan, NY', hours: 'Wednesday — Saturday · from 6:30 pm', phone: 'On request' },
+      ],
+    },
   },
 
   // ==========================================================
   // ITALIANO
   // ==========================================================
   it: {
-    nav: { home: 'Home', experience: "L'Esperienza", maison: 'La Maison', menu: 'Il Menu', ambiance: 'Atmosfera', reserve: 'Prenotare', tables: 'I Tavoli'  },
+    nav: { home: 'Home', experience: "L'Esperienza", maison: 'La Maison', menu: 'Il Menu', ambiance: 'Atmosfera', reserve: 'Prenotare', tables: 'I Tavoli' , maisons: 'Le Nostre Case' },
     hero: {
       kicker: 'Monaco — Riviera', title: 'MAISON LUMIÈRE', tagline: "L'arte dell'accoglienza.",
       sub: 'Un indirizzo d’eccezione a Monaco.', cta: 'Prenotare', scroll: 'Scorri per entrare',
@@ -350,7 +386,7 @@ export const t = {
   // РУССКИЙ
   // ==========================================================
   ru: {
-    nav: { home: 'Главная', experience: 'Опыт', maison: 'Дом', menu: 'Меню', ambiance: 'Атмосфера', reserve: 'Бронь', tables: 'Столы'  },
+    nav: { home: 'Главная', experience: 'Опыт', maison: 'Дом', menu: 'Меню', ambiance: 'Атмосфера', reserve: 'Бронь', tables: 'Столы' , maisons: 'Наши дома' },
     hero: {
       kicker: 'Монако — Ривьера', title: 'MAISON LUMIÈRE', tagline: 'Искусство гостеприимства.',
       sub: 'Исключительный адрес в Монако.', cta: 'Забронировать', scroll: 'Листайте, чтобы войти',
@@ -452,13 +488,22 @@ export const t = {
         { id: 'passe', name: 'Стол у пасса', desc: 'Лицом к бригаде, ближе всех к огню.', ambiance: 'Погружение', capacity: 6, standard: 'Дегустационное меню', gp: '590 € / гость' },
       ],
     },
+    maisons: {
+      label: 'Наши дома', title: 'Два адреса, одна подпись',
+      intro: 'От Княжества до Манхэттена — единый итальянский стандарт, две атмосферы. Выберите свой вечер.',
+      hoursLabel: 'Часы', addressLabel: 'Адрес', reserveCta: 'Забронировать',
+      houses: [
+        { id: 'mc', city: 'Монте-Карло', name: 'Главный дом', desc: 'Исторический ларец напротив порта. Belle Époque, свет свечей, кухня огня.', address: '3 Avenue des Spélugues, 98000 Monaco', hours: 'Вторник — воскресенье · с 19:00', phone: '+377 93 30 70 44' },
+        { id: 'ny', city: 'Нью-Йорк', name: 'La Table, Uptown', desc: 'Фирменный стиль на высоте, над огнями Манхэттена. Камерно, тихо, редко.', address: 'По приватному бронированию · Манхэттен, NY', hours: 'Среда — суббота · с 18:30', phone: 'По запросу' },
+      ],
+    },
   },
 
   // ==========================================================
   // DEUTSCH
   // ==========================================================
   de: {
-    nav: { home: 'Start', experience: 'Das Erlebnis', maison: 'Das Haus', menu: 'Die Karte', ambiance: 'Ambiente', reserve: 'Reservieren', tables: 'Die Tische'  },
+    nav: { home: 'Start', experience: 'Das Erlebnis', maison: 'Das Haus', menu: 'Die Karte', ambiance: 'Ambiente', reserve: 'Reservieren', tables: 'Die Tische' , maisons: 'Unsere Häuser' },
     hero: {
       kicker: 'Monaco — Riviera', title: 'MAISON LUMIÈRE', tagline: 'Die Kunst des Empfangens.',
       sub: 'Eine außergewöhnliche Adresse in Monaco.', cta: 'Reservieren', scroll: 'Scrollen Sie, um einzutreten',
@@ -560,13 +605,22 @@ export const t = {
         { id: 'passe', name: 'Der Tisch am Pass', desc: 'Der Brigade gegenüber, dem Feuer am nächsten.', ambiance: 'Immersiv', capacity: 6, standard: 'Degustationsmenü', gp: '590 € / Gast' },
       ],
     },
+    maisons: {
+      label: 'Unsere Häuser', title: 'Zwei Adressen, eine Handschrift',
+      intro: 'Vom Fürstentum bis Manhattan: derselbe italienische Anspruch, zwei Atmosphären. Wählen Sie Ihren Abend.',
+      hoursLabel: 'Öffnungszeiten', addressLabel: 'Adresse', reserveCta: 'Reservieren',
+      houses: [
+        { id: 'mc', city: 'Monte-Carlo', name: 'Das Stammhaus', desc: 'Das historische Refugium am Hafen. Belle Époque, Kerzenlicht, Küche des Feuers.', address: '3 Avenue des Spélugues, 98000 Monaco', hours: 'Dienstag — Sonntag · ab 19:00', phone: '+377 93 30 70 44' },
+        { id: 'ny', city: 'New York', name: 'La Table, Uptown', desc: 'Die Handschrift in der Höhe, über den Lichtern Manhattans. Intim, gedämpft, rar.', address: 'Auf private Reservierung · Manhattan, NY', hours: 'Mittwoch — Samstag · ab 18:30', phone: 'Auf Anfrage' },
+      ],
+    },
   },
 
   // ==========================================================
   // ESPAÑOL
   // ==========================================================
   es: {
-    nav: { home: 'Inicio', experience: 'La Experiencia', maison: 'La Casa', menu: 'La Carta', ambiance: 'Ambiente', reserve: 'Reservar', tables: 'Las Mesas'  },
+    nav: { home: 'Inicio', experience: 'La Experiencia', maison: 'La Casa', menu: 'La Carta', ambiance: 'Ambiente', reserve: 'Reservar', tables: 'Las Mesas' , maisons: 'Nuestras Casas' },
     hero: {
       kicker: 'Mónaco — Riviera', title: 'MAISON LUMIÈRE', tagline: 'El arte de recibir.',
       sub: 'Una dirección excepcional en Mónaco.', cta: 'Reservar', scroll: 'Desplázate para entrar',

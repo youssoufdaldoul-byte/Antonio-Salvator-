@@ -90,3 +90,13 @@ ambiance photography.
 
 Same flow: download PNGs → `public/images/table-alcove.png` etc. →
 `node scripts/optimize-images.mjs`. Fallbacks to existing photography until then.
+
+## Page · Nos Maisons (two addresses) — Nano Banana Pro 2K → `website/public/images/`
+
+| Path | Job ID | File |
+|---|---|---|
+| `images/house-monaco.webp` (4:5) — Monte-Carlo | `ca012922-8a44-4c0a-b0dc-437856b47094` | `hf_20260712_000427_ca012922-8a44-4c0a-b0dc-437856b47094.png` |
+| `images/house-newyork.webp` (4:5) — New York | `829bdd36-68e7-42ed-806c-0a5b371b8177` | `hf_20260712_000436_829bdd36-68e7-42ed-806c-0a5b371b8177.png` |
+
+Download PNGs → `public/images/house-monaco.png` etc. → `node scripts/optimize-images.mjs`.
+Fallbacks: terrace-night (MC) / interior-hall (NY) until committed.

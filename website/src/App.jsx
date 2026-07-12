@@ -13,6 +13,7 @@ import FullscreenMenu from './components/FullscreenMenu'
 import Home from './pages/Home'
 import MaisonPage from './pages/MaisonPage'
 import TablesPage from './pages/TablesPage'
+import MaisonsPage from './pages/MaisonsPage'
 
 function Shell() {
   const videoRef = useRef(null)
@@ -100,6 +101,10 @@ function Shell() {
         <Route
           path="/tables"
           element={<TablesPage tr={tr} lang={lang} setLang={setLang} onReserveTable={onReserveTable} />}
+        />
+        <Route
+          path="/maisons"
+          element={<MaisonsPage tr={tr} lang={lang} setLang={setLang} onReserve={onReserve} />}
         />
       </Routes>
     </>
