@@ -17,7 +17,7 @@ export const t = {
   // FRANÇAIS (primary)
   // ==========================================================
   fr: {
-    nav: { home: 'Accueil', experience: "L'Expérience", maison: 'La Maison', menu: 'Le Menu', ambiance: 'Ambiance', reserve: 'Réserver', tables: 'Les Tables' , maisons: 'Nos Maisons', boutique: 'La Boutique' },
+    nav: { home: 'Accueil', experience: "L'Expérience", maison: 'La Maison', menu: 'Le Menu', ambiance: 'Ambiance', reserve: 'Réserver', tables: 'Les Tables' , maisons: 'Nos Maisons', boutique: 'La Boutique', events: 'Événements' },
     hero: {
       kicker: 'Monaco — Riviera',
       title: 'MAISON LUMIÈRE',
@@ -129,46 +129,6 @@ export const t = {
       ],
     },
     maisons: {
-      label: 'Nuestras Casas', title: 'Dos direcciones, una firma',
-      intro: 'Del Principado a Manhattan: la misma exigencia italiana, dos atmósferas. Elija su noche.',
-      hoursLabel: 'Horario', addressLabel: 'Dirección', reserveCta: 'Reservar',
-      houses: [
-        { id: 'mc', city: 'Monte-Carlo', name: 'La Casa madre', desc: 'El estuche histórico, frente al puerto. Belle Époque, luz de velas, cocina de fuego.', address: '3 Avenue des Spélugues, 98000 Monaco', hours: 'Martes — Domingo · desde las 19:00', phone: '+377 93 30 70 44' },
-        { id: 'ny', city: 'Nueva York', name: 'La Table, Uptown', desc: 'La firma en las alturas, sobre las luces de Manhattan. Íntima, silenciosa, singular.', address: 'Reserva privada · Manhattan, NY', hours: 'Miércoles — Sábado · desde las 18:30', phone: 'Bajo petición' },
-      ],
-    },
-    boutique: {
-      label: 'La Boutique', title: 'La casa, para llevar',
-      intro: 'Unos pocos objetos firmados, prolongaciones de la mesa. Editados en pequeñas series, en su estuche.',
-      cta: 'Pedir', priceLabel: 'Precio',
-      items: [
-        { id: 1, name: 'Perfume « Lumière »', desc: 'Ámbar, cuero e higo. Eau de parfum, 100 ml.', price: '180 €' },
-        { id: 2, name: 'Salsa de trufa negra', desc: 'Trufa del Périgord, aceite de oliva. Edición limitada.', price: '48 €' },
-        { id: 3, name: 'Aceite de oliva excepcional', desc: 'Primera presión en frío, monovarietal.', price: '36 €' },
-        { id: 4, name: 'Vela « Braise »', desc: 'Cera vegetal, madera quemada y ámbar. 60 h.', price: '65 €' },
-      ],
-    },
-    maisons: {
-      label: 'Le Nostre Case', title: 'Due indirizzi, una sola firma',
-      intro: 'Dal Principato a Manhattan: la stessa esigenza italiana, due atmosfere. Scegliete la vostra sera.',
-      hoursLabel: 'Orari', addressLabel: 'Indirizzo', reserveCta: 'Prenotare',
-      houses: [
-        { id: 'mc', city: 'Monte-Carlo', name: 'La Casa madre', desc: 'Lo scrigno storico, di fronte al porto. Belle Époque, luce di candela, cucina di brace.', address: '3 Avenue des Spélugues, 98000 Monaco', hours: 'Martedì — Domenica · dalle 19:00', phone: '+377 93 30 70 44' },
-        { id: 'ny', city: 'New York', name: 'La Table, Uptown', desc: 'La firma in quota, sopra le luci di Manhattan. Intima, ovattata, rara.', address: 'Su prenotazione privata · Manhattan, NY', hours: 'Mercoledì — Sabato · dalle 18:30', phone: 'Su richiesta' },
-      ],
-    },
-    boutique: {
-      label: 'La Boutique', title: 'La maison, da portare via',
-      intro: 'Pochi oggetti firmati, estensioni della tavola. Prodotti in piccole serie, offerti in uno scrigno.',
-      cta: 'Ordinare', priceLabel: 'Prezzo',
-      items: [
-        { id: 1, name: 'Profumo « Lumière »', desc: 'Ambra, cuoio e fico. Eau de parfum, 100 ml.', price: '180 €' },
-        { id: 2, name: 'Salsa al tartufo nero', desc: 'Tartufo del Périgord, olio d’oliva. Edizione limitata.', price: '48 €' },
-        { id: 3, name: 'Olio d’oliva d’eccezione', desc: 'Prima spremitura a freddo, monovarietale.', price: '36 €' },
-        { id: 4, name: 'Candela « Braise »', desc: 'Cera vegetale, legno bruciato e ambra. 60 h.', price: '65 €' },
-      ],
-    },
-    maisons: {
       label: 'Nos Maisons', title: 'Deux adresses, une même signature',
       intro: "De la Principauté à Manhattan, la même exigence italienne, deux atmosphères. Choisissez votre soir.",
       hoursLabel: 'Horaires', addressLabel: 'Adresse', reserveCta: 'Réserver',
@@ -188,13 +148,24 @@ export const t = {
         { id: 4, name: 'Bougie « Braise »', desc: 'Cire végétale, bois brûlé et ambre. 60 h.', price: '65 €' },
       ],
     },
+    events: {
+      label: 'Événements', title: "L'année à Monaco",
+      intro: "Une saison de rendez-vous d'exception. Pour chacun, une table, un menu, un moment.",
+      offerLabel: 'Notre offre',
+      items: [
+        { key: 'gp', month: 'Mai', name: 'Grand Prix de Monaco', img: 'race', desc: 'La ville retient son souffle. Dîner face à la ferveur, menu en cinq temps.', offer: 'Menu Grand Prix · terrasse privatisée' },
+        { key: 'yacht', month: 'Septembre', name: 'Yacht Show', img: 'harbour', desc: "Le port se pare de géants. Une carte iodée, au fil de l'eau.", offer: 'Dîner armateurs · accord champagne' },
+        { key: 'fete', month: 'Novembre', name: 'Fête Nationale', img: 'festive', desc: "La Principauté s'illumine. Une soirée de gala, sous les lumières.", offer: "Menu de gala · feux d'artifice" },
+        { key: 'nye', month: 'Décembre', name: 'Réveillon', img: 'festive', desc: "Le dernier soir de l'année, célébré comme il se doit.", offer: 'Réveillon 7 services · minuit doré' },
+      ],
+    },
   },
 
   // ==========================================================
   // ENGLISH
   // ==========================================================
   en: {
-    nav: { home: 'Home', experience: 'The Experience', maison: 'The House', menu: 'The Menu', ambiance: 'Ambiance', reserve: 'Reserve', tables: 'The Tables' , maisons: 'Our Houses', boutique: 'The Boutique' },
+    nav: { home: 'Home', experience: 'The Experience', maison: 'The House', menu: 'The Menu', ambiance: 'Ambiance', reserve: 'Reserve', tables: 'The Tables' , maisons: 'Our Houses', boutique: 'The Boutique', events: 'Events' },
     hero: {
       kicker: 'Monaco — Riviera', title: 'MAISON LUMIÈRE', tagline: 'The art of hosting.',
       sub: 'An exceptional address in Monaco.', cta: 'Reserve', scroll: 'Scroll to enter',
@@ -316,13 +287,24 @@ export const t = {
         { id: 4, name: 'Candle “Braise”', desc: 'Plant wax, burnt wood and amber. 60 h.', price: '€65' },
       ],
     },
+    events: {
+      label: 'Events', title: 'The year in Monaco',
+      intro: 'A season of exceptional occasions. For each, a table, a menu, a moment.',
+      offerLabel: 'Our offer',
+      items: [
+        { key: 'gp', month: 'May', name: 'Monaco Grand Prix', img: 'race', desc: 'The city holds its breath. Dine facing the fervour, a five-course menu.', offer: 'Grand Prix menu · private terrace' },
+        { key: 'yacht', month: 'September', name: 'Yacht Show', img: 'harbour', desc: 'The port dons its giants. A menu from the sea, along the water.', offer: "Owners' dinner · champagne pairing" },
+        { key: 'fete', month: 'November', name: 'National Day', img: 'festive', desc: 'The Principality lights up. A gala evening, under the lights.', offer: 'Gala menu · fireworks' },
+        { key: 'nye', month: 'December', name: "New Year's Eve", img: 'festive', desc: 'The last night of the year, celebrated as it should be.', offer: '7-course NYE · golden midnight' },
+      ],
+    },
   },
 
   // ==========================================================
   // ITALIANO
   // ==========================================================
   it: {
-    nav: { home: 'Home', experience: "L'Esperienza", maison: 'La Maison', menu: 'Il Menu', ambiance: 'Atmosfera', reserve: 'Prenotare', tables: 'I Tavoli' , maisons: 'Le Nostre Case', boutique: 'La Boutique' },
+    nav: { home: 'Home', experience: "L'Esperienza", maison: 'La Maison', menu: 'Il Menu', ambiance: 'Atmosfera', reserve: 'Prenotare', tables: 'I Tavoli' , maisons: 'Le Nostre Case', boutique: 'La Boutique', events: 'Eventi' },
     hero: {
       kicker: 'Monaco — Riviera', title: 'MAISON LUMIÈRE', tagline: "L'arte dell'accoglienza.",
       sub: 'Un indirizzo d’eccezione a Monaco.', cta: 'Prenotare', scroll: 'Scorri per entrare',
@@ -424,13 +406,44 @@ export const t = {
         { id: 'passe', name: 'Il Tavolo del Pass', desc: 'Di fronte alla brigata, vicino al fuoco.', ambiance: 'Immersivo', capacity: 6, standard: 'Menu degustazione', gp: '590 € / pers.' },
       ],
     },
+    maisons: {
+      label: 'Le Nostre Case', title: 'Due indirizzi, una sola firma',
+      intro: 'Dal Principato a Manhattan: la stessa esigenza italiana, due atmosfere. Scegliete la vostra sera.',
+      hoursLabel: 'Orari', addressLabel: 'Indirizzo', reserveCta: 'Prenotare',
+      houses: [
+        { id: 'mc', city: 'Monte-Carlo', name: 'La Casa madre', desc: 'Lo scrigno storico, di fronte al porto. Belle Époque, luce di candela, cucina di brace.', address: '3 Avenue des Spélugues, 98000 Monaco', hours: 'Martedì — Domenica · dalle 19:00', phone: '+377 93 30 70 44' },
+        { id: 'ny', city: 'New York', name: 'La Table, Uptown', desc: 'La firma in quota, sopra le luci di Manhattan. Intima, ovattata, rara.', address: 'Su prenotazione privata · Manhattan, NY', hours: 'Mercoledì — Sabato · dalle 18:30', phone: 'Su richiesta' },
+      ],
+    },
+    boutique: {
+      label: 'La Boutique', title: 'La maison, da portare via',
+      intro: 'Pochi oggetti firmati, estensioni della tavola. Prodotti in piccole serie, offerti in uno scrigno.',
+      cta: 'Ordinare', priceLabel: 'Prezzo',
+      items: [
+        { id: 1, name: 'Profumo « Lumière »', desc: 'Ambra, cuoio e fico. Eau de parfum, 100 ml.', price: '180 €' },
+        { id: 2, name: 'Salsa al tartufo nero', desc: 'Tartufo del Périgord, olio d’oliva. Edizione limitata.', price: '48 €' },
+        { id: 3, name: 'Olio d’oliva d’eccezione', desc: 'Prima spremitura a freddo, monovarietale.', price: '36 €' },
+        { id: 4, name: 'Candela « Braise »', desc: 'Cera vegetale, legno bruciato e ambra. 60 h.', price: '65 €' },
+      ],
+    },
+    events: {
+      label: 'Eventi', title: "L'anno a Monaco",
+      intro: "Una stagione di appuntamenti d'eccezione. Per ciascuno, un tavolo, un menu, un momento.",
+      offerLabel: 'La nostra offerta',
+      items: [
+        { key: 'gp', month: 'Maggio', name: 'Gran Premio di Monaco', img: 'race', desc: 'La città trattiene il respiro. Cena di fronte al fervore, menu in cinque tempi.', offer: 'Menu Gran Premio · terrazza privata' },
+        { key: 'yacht', month: 'Settembre', name: 'Yacht Show', img: 'harbour', desc: "Il porto si veste di giganti. Una carta di mare, lungo l'acqua.", offer: 'Cena armatori · abbinamento champagne' },
+        { key: 'fete', month: 'Novembre', name: 'Festa Nazionale', img: 'festive', desc: 'Il Principato si illumina. Una serata di gala, sotto le luci.', offer: "Menu di gala · fuochi d'artificio" },
+        { key: 'nye', month: 'Dicembre', name: 'Capodanno', img: 'festive', desc: "L'ultima sera dell'anno, celebrata come si deve.", offer: 'Cenone 7 portate · mezzanotte dorata' },
+      ],
+    },
   },
 
   // ==========================================================
   // РУССКИЙ
   // ==========================================================
   ru: {
-    nav: { home: 'Главная', experience: 'Опыт', maison: 'Дом', menu: 'Меню', ambiance: 'Атмосфера', reserve: 'Бронь', tables: 'Столы' , maisons: 'Наши дома', boutique: 'Бутик' },
+    nav: { home: 'Главная', experience: 'Опыт', maison: 'Дом', menu: 'Меню', ambiance: 'Атмосфера', reserve: 'Бронь', tables: 'Столы' , maisons: 'Наши дома', boutique: 'Бутик', events: 'События' },
     hero: {
       kicker: 'Монако — Ривьера', title: 'MAISON LUMIÈRE', tagline: 'Искусство гостеприимства.',
       sub: 'Исключительный адрес в Монако.', cta: 'Забронировать', scroll: 'Листайте, чтобы войти',
@@ -552,13 +565,24 @@ export const t = {
         { id: 4, name: 'Свеча « Braise »', desc: 'Растительный воск, жжёное дерево и амбра. 60 ч.', price: '65 €' },
       ],
     },
+    events: {
+      label: 'События', title: 'Год в Монако',
+      intro: 'Сезон исключительных событий. К каждому — стол, меню, момент.',
+      offerLabel: 'Наше предложение',
+      items: [
+        { key: 'gp', month: 'Май', name: 'Гран-при Монако', img: 'race', desc: 'Город затаил дыхание. Ужин напротив накала, меню из пяти подач.', offer: 'Меню Гран-при · приватная терраса' },
+        { key: 'yacht', month: 'Сентябрь', name: 'Yacht Show', img: 'harbour', desc: 'Порт наполняется гигантами. Морская карта, у самой воды.', offer: 'Ужин судовладельцев · шампанское' },
+        { key: 'fete', month: 'Ноябрь', name: 'Национальный праздник', img: 'festive', desc: 'Княжество сияет. Гала-вечер под огнями.', offer: 'Гала-меню · фейерверк' },
+        { key: 'nye', month: 'Декабрь', name: 'Новогодняя ночь', img: 'festive', desc: 'Последний вечер года, отмеченный как подобает.', offer: 'Новый год · 7 подач · золотая полночь' },
+      ],
+    },
   },
 
   // ==========================================================
   // DEUTSCH
   // ==========================================================
   de: {
-    nav: { home: 'Start', experience: 'Das Erlebnis', maison: 'Das Haus', menu: 'Die Karte', ambiance: 'Ambiente', reserve: 'Reservieren', tables: 'Die Tische' , maisons: 'Unsere Häuser', boutique: 'Die Boutique' },
+    nav: { home: 'Start', experience: 'Das Erlebnis', maison: 'Das Haus', menu: 'Die Karte', ambiance: 'Ambiente', reserve: 'Reservieren', tables: 'Die Tische' , maisons: 'Unsere Häuser', boutique: 'Die Boutique', events: 'Events' },
     hero: {
       kicker: 'Monaco — Riviera', title: 'MAISON LUMIÈRE', tagline: 'Die Kunst des Empfangens.',
       sub: 'Eine außergewöhnliche Adresse in Monaco.', cta: 'Reservieren', scroll: 'Scrollen Sie, um einzutreten',
@@ -680,13 +704,24 @@ export const t = {
         { id: 4, name: 'Kerze „Braise“', desc: 'Pflanzenwachs, verbranntes Holz und Amber. 60 h.', price: '65 €' },
       ],
     },
+    events: {
+      label: 'Events', title: 'Das Jahr in Monaco',
+      intro: 'Eine Saison außergewöhnlicher Anlässe. Für jeden: ein Tisch, ein Menü, ein Moment.',
+      offerLabel: 'Unser Angebot',
+      items: [
+        { key: 'gp', month: 'Mai', name: 'Grand Prix von Monaco', img: 'race', desc: 'Die Stadt hält den Atem an. Dinieren im Angesicht der Leidenschaft, Fünf-Gänge-Menü.', offer: 'Grand-Prix-Menü · private Terrasse' },
+        { key: 'yacht', month: 'September', name: 'Yacht Show', img: 'harbour', desc: 'Der Hafen zeigt seine Giganten. Eine Karte aus dem Meer, am Wasser.', offer: 'Reederessen · Champagner-Begleitung' },
+        { key: 'fete', month: 'November', name: 'Nationalfeiertag', img: 'festive', desc: 'Das Fürstentum erstrahlt. Ein Galaabend, unter den Lichtern.', offer: 'Gala-Menü · Feuerwerk' },
+        { key: 'nye', month: 'Dezember', name: 'Silvester', img: 'festive', desc: 'Der letzte Abend des Jahres, gefeiert wie es sich gehört.', offer: '7-Gänge-Silvester · goldene Mitternacht' },
+      ],
+    },
   },
 
   // ==========================================================
   // ESPAÑOL
   // ==========================================================
   es: {
-    nav: { home: 'Inicio', experience: 'La Experiencia', maison: 'La Casa', menu: 'La Carta', ambiance: 'Ambiente', reserve: 'Reservar', tables: 'Las Mesas' , maisons: 'Nuestras Casas', boutique: 'La Boutique' },
+    nav: { home: 'Inicio', experience: 'La Experiencia', maison: 'La Casa', menu: 'La Carta', ambiance: 'Ambiente', reserve: 'Reservar', tables: 'Las Mesas' , maisons: 'Nuestras Casas', boutique: 'La Boutique', events: 'Eventos' },
     hero: {
       kicker: 'Mónaco — Riviera', title: 'MAISON LUMIÈRE', tagline: 'El arte de recibir.',
       sub: 'Una dirección excepcional en Mónaco.', cta: 'Reservar', scroll: 'Desplázate para entrar',
@@ -786,6 +821,37 @@ export const t = {
         { id: 'vue', name: 'La Mesa Vista', desc: 'El ventanal a la plaza, luces nocturnas.', ambiance: 'Panorama', capacity: 4, standard: 'A la carta', gp: '690 € / pers.' },
         { id: 'salon', name: 'El Salón Privado', desc: 'Un salón cerrado, servicio dedicado.', ambiance: 'Confidencial', capacity: 8, standard: 'Menú degustación', gp: 'Bajo petición' },
         { id: 'passe', name: 'La Mesa del Pase', desc: 'Frente a la brigada, junto al fuego.', ambiance: 'Inmersivo', capacity: 6, standard: 'Menú degustación', gp: '590 € / pers.' },
+      ],
+    },
+    maisons: {
+      label: 'Nuestras Casas', title: 'Dos direcciones, una firma',
+      intro: 'Del Principado a Manhattan: la misma exigencia italiana, dos atmósferas. Elija su noche.',
+      hoursLabel: 'Horario', addressLabel: 'Dirección', reserveCta: 'Reservar',
+      houses: [
+        { id: 'mc', city: 'Monte-Carlo', name: 'La Casa madre', desc: 'El estuche histórico, frente al puerto. Belle Époque, luz de velas, cocina de fuego.', address: '3 Avenue des Spélugues, 98000 Monaco', hours: 'Martes — Domingo · desde las 19:00', phone: '+377 93 30 70 44' },
+        { id: 'ny', city: 'Nueva York', name: 'La Table, Uptown', desc: 'La firma en las alturas, sobre las luces de Manhattan. Íntima, silenciosa, singular.', address: 'Reserva privada · Manhattan, NY', hours: 'Miércoles — Sábado · desde las 18:30', phone: 'Bajo petición' },
+      ],
+    },
+    boutique: {
+      label: 'La Boutique', title: 'La casa, para llevar',
+      intro: 'Unos pocos objetos firmados, prolongaciones de la mesa. Editados en pequeñas series, en su estuche.',
+      cta: 'Pedir', priceLabel: 'Precio',
+      items: [
+        { id: 1, name: 'Perfume « Lumière »', desc: 'Ámbar, cuero e higo. Eau de parfum, 100 ml.', price: '180 €' },
+        { id: 2, name: 'Salsa de trufa negra', desc: 'Trufa del Périgord, aceite de oliva. Edición limitada.', price: '48 €' },
+        { id: 3, name: 'Aceite de oliva excepcional', desc: 'Primera presión en frío, monovarietal.', price: '36 €' },
+        { id: 4, name: 'Vela « Braise »', desc: 'Cera vegetal, madera quemada y ámbar. 60 h.', price: '65 €' },
+      ],
+    },
+    events: {
+      label: 'Eventos', title: 'El año en Mónaco',
+      intro: 'Una temporada de citas excepcionales. Para cada una, una mesa, un menú, un momento.',
+      offerLabel: 'Nuestra oferta',
+      items: [
+        { key: 'gp', month: 'Mayo', name: 'Gran Premio de Mónaco', img: 'race', desc: 'La ciudad contiene el aliento. Cena frente al fervor, menú en cinco tiempos.', offer: 'Menú Gran Premio · terraza privada' },
+        { key: 'yacht', month: 'Septiembre', name: 'Yacht Show', img: 'harbour', desc: 'El puerto se viste de gigantes. Una carta marina, junto al agua.', offer: 'Cena armadores · maridaje champán' },
+        { key: 'fete', month: 'Noviembre', name: 'Fiesta Nacional', img: 'festive', desc: 'El Principado se ilumina. Una velada de gala, bajo las luces.', offer: 'Menú de gala · fuegos artificiales' },
+        { key: 'nye', month: 'Diciembre', name: 'Nochevieja', img: 'festive', desc: 'La última noche del año, celebrada como se debe.', offer: 'Nochevieja 7 platos · medianoche dorada' },
       ],
     },
   },

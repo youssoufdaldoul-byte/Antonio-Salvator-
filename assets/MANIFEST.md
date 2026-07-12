@@ -124,3 +124,14 @@ Stills (Nano Banana Pro 2K, 1:1) → `product-N.png` then `node scripts/optimize
 Base URL for all: `https://d8j0ntlcm91z4.cloudfront.net/user_3FzneIW6DeCzXNNc7KNNfmQuLKf/`
 Card fallback chain: `product-N-360.mp4` → `product-N.webp` → gold monogram.
 The optimize-images script also converts `public/products/*.png` → `.webp`.
+
+## Page · Événements (Monaco calendar) — Nano Banana Pro 2K 16:9 → `website/public/images/`
+
+| Path | Job ID | File |
+|---|---|---|
+| `images/event-race.webp` — Grand Prix (light trails) | `b3f2ecf4-32da-44ae-8cf1-06979a5a03c1` | `hf_20260712_002311_b3f2ecf4-32da-44ae-8cf1-06979a5a03c1.png` |
+| `images/event-harbour.webp` — Yacht Show (harbour) | `c194cf49-c20c-4e64-b1dd-201e7fc12903` | `hf_20260712_002321_c194cf49-c20c-4e64-b1dd-201e7fc12903.png` |
+| `images/event-festive.webp` — Fête / Réveillon (festive) | `957ff5f6-1e1a-4f02-901b-f791041b5bd7` | `hf_20260712_002331_957ff5f6-1e1a-4f02-901b-f791041b5bd7.png` |
+
+Download → `public/images/event-race.png` etc. → `node scripts/optimize-images.mjs`.
+Fallbacks: terrace-night / detail-bar until committed.

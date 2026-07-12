@@ -14,6 +14,7 @@ const NAV = [
   { key: 'tables', type: 'route', to: '/tables', trKey: 'tables' },
   { key: 'maisons', type: 'route', to: '/maisons', trKey: 'maisons' },
   { key: 'boutique', type: 'route', to: '/boutique', trKey: 'boutique' },
+  { key: 'events', type: 'route', to: '/evenements', trKey: 'events' },
   { key: 'ambiance', type: 'section', id: 'ambiance', trKey: 'ambiance' },
   { key: 'reservation', type: 'section', id: 'reservation', trKey: 'reserve' },
 ]
@@ -24,6 +25,7 @@ const PREVIEWS = {
   tables: { src: '/images/table-vue.webp', fallback: '/images/detail-table.webp', label: 'Les tables' },
   maisons: { src: '/images/house-monaco.webp', fallback: '/images/terrace-night.webp', label: 'Nos maisons' },
   boutique: { src: '/products/product-1.webp', fallback: '/images/detail-bar.webp', label: 'La boutique' },
+  events: { src: '/images/event-harbour.webp', fallback: '/images/terrace-night.webp', label: 'Événements' },
   menu: { src: '/images/dish-2.webp', label: 'Les plats' },
   ambiance: { src: '/images/terrace-night.webp', label: 'La terrasse' },
   reservation: { src: '/images/terrace-night.webp', label: 'Votre table' },
