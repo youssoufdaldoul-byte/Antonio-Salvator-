@@ -14,6 +14,7 @@ import Home from './pages/Home'
 import MaisonPage from './pages/MaisonPage'
 import TablesPage from './pages/TablesPage'
 import MaisonsPage from './pages/MaisonsPage'
+import BoutiquePage from './pages/BoutiquePage'
 
 function Shell() {
   const videoRef = useRef(null)
@@ -105,6 +106,10 @@ function Shell() {
         <Route
           path="/maisons"
           element={<MaisonsPage tr={tr} lang={lang} setLang={setLang} onReserve={onReserve} />}
+        />
+        <Route
+          path="/boutique"
+          element={<BoutiquePage tr={tr} lang={lang} setLang={setLang} onReserve={onReserve} />}
         />
       </Routes>
     </>

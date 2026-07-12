@@ -17,7 +17,7 @@ export const t = {
   // FRANÇAIS (primary)
   // ==========================================================
   fr: {
-    nav: { home: 'Accueil', experience: "L'Expérience", maison: 'La Maison', menu: 'Le Menu', ambiance: 'Ambiance', reserve: 'Réserver', tables: 'Les Tables' , maisons: 'Nos Maisons' },
+    nav: { home: 'Accueil', experience: "L'Expérience", maison: 'La Maison', menu: 'Le Menu', ambiance: 'Ambiance', reserve: 'Réserver', tables: 'Les Tables' , maisons: 'Nos Maisons', boutique: 'La Boutique' },
     hero: {
       kicker: 'Monaco — Riviera',
       title: 'MAISON LUMIÈRE',
@@ -137,6 +137,17 @@ export const t = {
         { id: 'ny', city: 'Nueva York', name: 'La Table, Uptown', desc: 'La firma en las alturas, sobre las luces de Manhattan. Íntima, silenciosa, singular.', address: 'Reserva privada · Manhattan, NY', hours: 'Miércoles — Sábado · desde las 18:30', phone: 'Bajo petición' },
       ],
     },
+    boutique: {
+      label: 'La Boutique', title: 'La casa, para llevar',
+      intro: 'Unos pocos objetos firmados, prolongaciones de la mesa. Editados en pequeñas series, en su estuche.',
+      cta: 'Pedir', priceLabel: 'Precio',
+      items: [
+        { id: 1, name: 'Perfume « Lumière »', desc: 'Ámbar, cuero e higo. Eau de parfum, 100 ml.', price: '180 €' },
+        { id: 2, name: 'Salsa de trufa negra', desc: 'Trufa del Périgord, aceite de oliva. Edición limitada.', price: '48 €' },
+        { id: 3, name: 'Aceite de oliva excepcional', desc: 'Primera presión en frío, monovarietal.', price: '36 €' },
+        { id: 4, name: 'Vela « Braise »', desc: 'Cera vegetal, madera quemada y ámbar. 60 h.', price: '65 €' },
+      ],
+    },
     maisons: {
       label: 'Le Nostre Case', title: 'Due indirizzi, una sola firma',
       intro: 'Dal Principato a Manhattan: la stessa esigenza italiana, due atmosfere. Scegliete la vostra sera.',
@@ -144,6 +155,17 @@ export const t = {
       houses: [
         { id: 'mc', city: 'Monte-Carlo', name: 'La Casa madre', desc: 'Lo scrigno storico, di fronte al porto. Belle Époque, luce di candela, cucina di brace.', address: '3 Avenue des Spélugues, 98000 Monaco', hours: 'Martedì — Domenica · dalle 19:00', phone: '+377 93 30 70 44' },
         { id: 'ny', city: 'New York', name: 'La Table, Uptown', desc: 'La firma in quota, sopra le luci di Manhattan. Intima, ovattata, rara.', address: 'Su prenotazione privata · Manhattan, NY', hours: 'Mercoledì — Sabato · dalle 18:30', phone: 'Su richiesta' },
+      ],
+    },
+    boutique: {
+      label: 'La Boutique', title: 'La maison, da portare via',
+      intro: 'Pochi oggetti firmati, estensioni della tavola. Prodotti in piccole serie, offerti in uno scrigno.',
+      cta: 'Ordinare', priceLabel: 'Prezzo',
+      items: [
+        { id: 1, name: 'Profumo « Lumière »', desc: 'Ambra, cuoio e fico. Eau de parfum, 100 ml.', price: '180 €' },
+        { id: 2, name: 'Salsa al tartufo nero', desc: 'Tartufo del Périgord, olio d’oliva. Edizione limitata.', price: '48 €' },
+        { id: 3, name: 'Olio d’oliva d’eccezione', desc: 'Prima spremitura a freddo, monovarietale.', price: '36 €' },
+        { id: 4, name: 'Candela « Braise »', desc: 'Cera vegetale, legno bruciato e ambra. 60 h.', price: '65 €' },
       ],
     },
     maisons: {
@@ -155,13 +177,24 @@ export const t = {
         { id: 'ny', city: 'New York', name: 'La Table, Uptown', desc: 'La signature en altitude, au-dessus des lumières de Manhattan. Intime, feutrée, rare.', address: 'Sur réservation privée · Manhattan, NY', hours: 'Du mercredi au samedi · dès 18h30', phone: 'Sur demande' },
       ],
     },
+    boutique: {
+      label: 'La Boutique', title: 'La maison, à emporter',
+      intro: "Quelques objets signés, prolongements de la table. Édités en petites séries, offerts dans un écrin.",
+      cta: 'Commander', priceLabel: 'Prix',
+      items: [
+        { id: 1, name: 'Parfum « Lumière »', desc: 'Ambre, cuir et figue. Eau de parfum, 100 ml.', price: '180 €' },
+        { id: 2, name: 'Sauce à la truffe noire', desc: 'Truffe du Périgord, huile d’olive. Édition limitée.', price: '48 €' },
+        { id: 3, name: 'Huile d’olive d’exception', desc: 'Première pression à froid, monovariétale.', price: '36 €' },
+        { id: 4, name: 'Bougie « Braise »', desc: 'Cire végétale, bois brûlé et ambre. 60 h.', price: '65 €' },
+      ],
+    },
   },
 
   // ==========================================================
   // ENGLISH
   // ==========================================================
   en: {
-    nav: { home: 'Home', experience: 'The Experience', maison: 'The House', menu: 'The Menu', ambiance: 'Ambiance', reserve: 'Reserve', tables: 'The Tables' , maisons: 'Our Houses' },
+    nav: { home: 'Home', experience: 'The Experience', maison: 'The House', menu: 'The Menu', ambiance: 'Ambiance', reserve: 'Reserve', tables: 'The Tables' , maisons: 'Our Houses', boutique: 'The Boutique' },
     hero: {
       kicker: 'Monaco — Riviera', title: 'MAISON LUMIÈRE', tagline: 'The art of hosting.',
       sub: 'An exceptional address in Monaco.', cta: 'Reserve', scroll: 'Scroll to enter',
@@ -272,13 +305,24 @@ export const t = {
         { id: 'ny', city: 'New York', name: 'The Table, Uptown', desc: 'The signature at altitude, above the lights of Manhattan. Intimate, hushed, rare.', address: 'By private reservation · Manhattan, NY', hours: 'Wednesday — Saturday · from 6:30 pm', phone: 'On request' },
       ],
     },
+    boutique: {
+      label: 'The Boutique', title: 'The house, to take home',
+      intro: 'A few signed objects, extensions of the table. Produced in small series, presented in a case.',
+      cta: 'Order', priceLabel: 'Price',
+      items: [
+        { id: 1, name: 'Parfum “Lumière”', desc: 'Amber, leather and fig. Eau de parfum, 100 ml.', price: '€180' },
+        { id: 2, name: 'Black truffle sauce', desc: 'Périgord truffle, olive oil. Limited edition.', price: '€48' },
+        { id: 3, name: 'Exceptional olive oil', desc: 'First cold pressing, single variety.', price: '€36' },
+        { id: 4, name: 'Candle “Braise”', desc: 'Plant wax, burnt wood and amber. 60 h.', price: '€65' },
+      ],
+    },
   },
 
   // ==========================================================
   // ITALIANO
   // ==========================================================
   it: {
-    nav: { home: 'Home', experience: "L'Esperienza", maison: 'La Maison', menu: 'Il Menu', ambiance: 'Atmosfera', reserve: 'Prenotare', tables: 'I Tavoli' , maisons: 'Le Nostre Case' },
+    nav: { home: 'Home', experience: "L'Esperienza", maison: 'La Maison', menu: 'Il Menu', ambiance: 'Atmosfera', reserve: 'Prenotare', tables: 'I Tavoli' , maisons: 'Le Nostre Case', boutique: 'La Boutique' },
     hero: {
       kicker: 'Monaco — Riviera', title: 'MAISON LUMIÈRE', tagline: "L'arte dell'accoglienza.",
       sub: 'Un indirizzo d’eccezione a Monaco.', cta: 'Prenotare', scroll: 'Scorri per entrare',
@@ -386,7 +430,7 @@ export const t = {
   // РУССКИЙ
   // ==========================================================
   ru: {
-    nav: { home: 'Главная', experience: 'Опыт', maison: 'Дом', menu: 'Меню', ambiance: 'Атмосфера', reserve: 'Бронь', tables: 'Столы' , maisons: 'Наши дома' },
+    nav: { home: 'Главная', experience: 'Опыт', maison: 'Дом', menu: 'Меню', ambiance: 'Атмосфера', reserve: 'Бронь', tables: 'Столы' , maisons: 'Наши дома', boutique: 'Бутик' },
     hero: {
       kicker: 'Монако — Ривьера', title: 'MAISON LUMIÈRE', tagline: 'Искусство гостеприимства.',
       sub: 'Исключительный адрес в Монако.', cta: 'Забронировать', scroll: 'Листайте, чтобы войти',
@@ -497,13 +541,24 @@ export const t = {
         { id: 'ny', city: 'Нью-Йорк', name: 'La Table, Uptown', desc: 'Фирменный стиль на высоте, над огнями Манхэттена. Камерно, тихо, редко.', address: 'По приватному бронированию · Манхэттен, NY', hours: 'Среда — суббота · с 18:30', phone: 'По запросу' },
       ],
     },
+    boutique: {
+      label: 'Бутик', title: 'Дом — с собой',
+      intro: 'Несколько именных предметов, продолжение стола. Малые серии, в подарочном ларце.',
+      cta: 'Заказать', priceLabel: 'Цена',
+      items: [
+        { id: 1, name: 'Парфюм « Lumière »', desc: 'Амбра, кожа и инжир. Eau de parfum, 100 мл.', price: '180 €' },
+        { id: 2, name: 'Соус из чёрного трюфеля', desc: 'Трюфель Перигора, оливковое масло. Лимит. серия.', price: '48 €' },
+        { id: 3, name: 'Исключительное оливковое масло', desc: 'Первый холодный отжим, моносорт.', price: '36 €' },
+        { id: 4, name: 'Свеча « Braise »', desc: 'Растительный воск, жжёное дерево и амбра. 60 ч.', price: '65 €' },
+      ],
+    },
   },
 
   // ==========================================================
   // DEUTSCH
   // ==========================================================
   de: {
-    nav: { home: 'Start', experience: 'Das Erlebnis', maison: 'Das Haus', menu: 'Die Karte', ambiance: 'Ambiente', reserve: 'Reservieren', tables: 'Die Tische' , maisons: 'Unsere Häuser' },
+    nav: { home: 'Start', experience: 'Das Erlebnis', maison: 'Das Haus', menu: 'Die Karte', ambiance: 'Ambiente', reserve: 'Reservieren', tables: 'Die Tische' , maisons: 'Unsere Häuser', boutique: 'Die Boutique' },
     hero: {
       kicker: 'Monaco — Riviera', title: 'MAISON LUMIÈRE', tagline: 'Die Kunst des Empfangens.',
       sub: 'Eine außergewöhnliche Adresse in Monaco.', cta: 'Reservieren', scroll: 'Scrollen Sie, um einzutreten',
@@ -614,13 +669,24 @@ export const t = {
         { id: 'ny', city: 'New York', name: 'La Table, Uptown', desc: 'Die Handschrift in der Höhe, über den Lichtern Manhattans. Intim, gedämpft, rar.', address: 'Auf private Reservierung · Manhattan, NY', hours: 'Mittwoch — Samstag · ab 18:30', phone: 'Auf Anfrage' },
       ],
     },
+    boutique: {
+      label: 'Die Boutique', title: 'Das Haus zum Mitnehmen',
+      intro: 'Einige signierte Objekte, Erweiterungen der Tafel. In kleinen Serien, im Etui überreicht.',
+      cta: 'Bestellen', priceLabel: 'Preis',
+      items: [
+        { id: 1, name: 'Parfum „Lumière“', desc: 'Amber, Leder und Feige. Eau de Parfum, 100 ml.', price: '180 €' },
+        { id: 2, name: 'Schwarze Trüffelsauce', desc: 'Périgord-Trüffel, Olivenöl. Limitierte Edition.', price: '48 €' },
+        { id: 3, name: 'Außergewöhnliches Olivenöl', desc: 'Erste Kaltpressung, sortenrein.', price: '36 €' },
+        { id: 4, name: 'Kerze „Braise“', desc: 'Pflanzenwachs, verbranntes Holz und Amber. 60 h.', price: '65 €' },
+      ],
+    },
   },
 
   // ==========================================================
   // ESPAÑOL
   // ==========================================================
   es: {
-    nav: { home: 'Inicio', experience: 'La Experiencia', maison: 'La Casa', menu: 'La Carta', ambiance: 'Ambiente', reserve: 'Reservar', tables: 'Las Mesas' , maisons: 'Nuestras Casas' },
+    nav: { home: 'Inicio', experience: 'La Experiencia', maison: 'La Casa', menu: 'La Carta', ambiance: 'Ambiente', reserve: 'Reservar', tables: 'Las Mesas' , maisons: 'Nuestras Casas', boutique: 'La Boutique' },
     hero: {
       kicker: 'Mónaco — Riviera', title: 'MAISON LUMIÈRE', tagline: 'El arte de recibir.',
       sub: 'Una dirección excepcional en Mónaco.', cta: 'Reservar', scroll: 'Desplázate para entrar',
