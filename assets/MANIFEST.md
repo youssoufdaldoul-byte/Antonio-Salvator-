@@ -100,3 +100,27 @@ Same flow: download PNGs → `public/images/table-alcove.png` etc. →
 
 Download PNGs → `public/images/house-monaco.png` etc. → `node scripts/optimize-images.mjs`.
 Fallbacks: terrace-night (MC) / interior-hall (NY) until committed.
+
+## Page · La Boutique — product stills + 360° videos → `website/public/products/`
+
+Stills (Nano Banana Pro 2K, 1:1) → `product-N.png` then `node scripts/optimize-images.mjs` → `.webp`:
+
+| Product | Still job ID | File |
+|---|---|---|
+| 1 · Parfum « Lumière » | `e69a7ce5-8196-4a88-8b70-4e801dee2cdf` | `hf_20260712_000950_e69a7ce5-8196-4a88-8b70-4e801dee2cdf.png` |
+| 2 · Sauce à la truffe noire | `a9d33030-e95a-4262-983a-768155febcc1` | `hf_20260712_001000_a9d33030-e95a-4262-983a-768155febcc1.png` |
+| 3 · Huile d'olive d'exception | `0cca5f92-7ec1-40cf-9eb5-b1a437b50080` | `hf_20260712_001012_0cca5f92-7ec1-40cf-9eb5-b1a437b50080.png` |
+| 4 · Bougie « Braise » | `fde98c32-6b50-4eb8-addc-fbadf5691505` | `hf_20260712_001022_fde98c32-6b50-4eb8-addc-fbadf5691505.png` |
+
+360° rotation videos (Seedance 2.0, 1:1, 8 s, silent) → `product-N-360.mp4`:
+
+| Product | Video job ID |
+|---|---|
+| 1 · Parfum | `8be7ed48-ffc3-49cd-8caa-64533284fdd1` |
+| 2 · Sauce truffe | `e9159604-b5f0-4eff-8447-418b726d28db` |
+| 3 · Huile d'olive | `2b905575-7f8b-4cb8-a315-dc1705096126` |
+| 4 · Bougie | `e2e2b44d-831c-46a6-927d-0ec911b19856` |
+
+Base URL for all: `https://d8j0ntlcm91z4.cloudfront.net/user_3FzneIW6DeCzXNNc7KNNfmQuLKf/`
+Card fallback chain: `product-N-360.mp4` → `product-N.webp` → gold monogram.
+The optimize-images script also converts `public/products/*.png` → `.webp`.
