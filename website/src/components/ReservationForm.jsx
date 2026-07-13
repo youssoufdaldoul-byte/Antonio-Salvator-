@@ -1,7 +1,9 @@
 // MAISON LUMIÈRE — reservation request form
 // Real email delivery via Formspree (config/restaurant.js → formspreeId).
-// No faking: while formspreeId is empty the form says so explicitly and
-// directs guests to the click-to-call phone button.
+// No faking: when a formspreeId is set the request is POSTed to Formspree
+// (lands in an inbox). Otherwise the form composes a genuine reservation
+// email via the guest's mail app (mailto) — still real, no backend needed.
+// The click-to-call phone button is always available as a fallback.
 import { useMemo, useState } from 'react'
 import { RESTAURANT } from '../config/restaurant'
 
@@ -37,11 +39,32 @@ export default function ReservationForm({ tr, initialMessage = '' }) {
     return Object.keys(err).length === 0
   }
 
+  const subjectLine = () =>
+    `Réservation — ${values.name} · ${values.date} ${values.time} · ${values.guests} ${f.guestsUnit}`
+
+  // No backend configured: open the guest's mail app with a real, prefilled
+  // reservation email to the restaurant. Genuine delivery, zero setup.
+  const sendViaMailto = () => {
+    const body = [
+      `${f.date}: ${values.date}`,
+      `${f.time}: ${values.time}`,
+      `${f.guests}: ${values.guests}`,
+      `${f.name}: ${values.name}`,
+      `${f.phone}: ${values.phone}`,
+      `${f.email}: ${values.email}`,
+      values.message ? `${f.message}: ${values.message}` : null,
+    ].filter(Boolean).join('\n')
+    window.location.href =
+      `mailto:${RESTAURANT.email}?subject=${encodeURIComponent(subjectLine())}` +
+      `&body=${encodeURIComponent(body)}`
+    setStatus('success')
+  }
+
   const onSubmit = async (e) => {
     e.preventDefault()
     if (!validate()) return
     if (!RESTAURANT.formspreeId) {
-      setStatus('unconfigured')
+      sendViaMailto()
       return
     }
     setStatus('sending')
@@ -49,10 +72,7 @@ export default function ReservationForm({ tr, initialMessage = '' }) {
       const res = await fetch(`https://formspree.io/f/${RESTAURANT.formspreeId}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          _subject: `Réservation — ${values.name} · ${values.date} ${values.time} · ${values.guests} couverts`,
-          ...values,
-        }),
+        body: JSON.stringify({ _subject: subjectLine(), ...values }),
       })
       setStatus(res.ok ? 'success' : 'error')
     } catch {
