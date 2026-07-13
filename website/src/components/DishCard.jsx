@@ -9,6 +9,7 @@ import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { asset } from '../asset'
+import { DISH_CUTOUTS } from '../config/dishCutouts'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -93,7 +94,7 @@ export default function DishCard({ index, dish, cta, onDiscover }) {
           {cutoutOk ? (
             <img
               className="dish-pop__img dish-pop__img--cutout"
-              src={asset(`/cutouts/dish-${index}-cutout.png`)}
+              src={asset(DISH_CUTOUTS[index] || `/cutouts/dish-${index}-cutout.png`)}
               alt={dish.name}
               loading="lazy"
               onError={() => setCutoutOk(false)}
