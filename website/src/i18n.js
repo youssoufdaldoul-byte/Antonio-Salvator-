@@ -19,13 +19,13 @@ export const t = {
   fr: {
     nav: { home: 'Accueil', experience: "L'Expérience", maison: 'La Maison', menu: 'Le Menu', ambiance: 'Ambiance', reserve: 'Réserver', tables: 'Les Tables' , maisons: 'Nos Maisons', boutique: 'La Boutique', events: 'Événements', press: 'Presse' },
     hero: {
-      kicker: 'Monaco — Riviera',
+      kicker: 'Cannes — Riviera',
       title: 'MAISON LUMIÈRE',
       tagline: "L'art de recevoir.",
-      sub: "Une adresse d'exception à Monaco.",
+      sub: "Une adresse d'exception à Cannes.",
       cta: 'Réserver',
       scroll: 'Faites défiler pour entrer',
-      chips: ['Étoilé Michelin', 'Gastronomie italienne', 'Monaco'],
+      chips: ['Gastronomie française', 'Michelin · Gault&Millau', 'Cannes'],
     },
     experience: {
       label: "L'Expérience",
@@ -91,7 +91,7 @@ export const t = {
     },
     legal: {
       link: 'Mentions légales', title: 'Mentions légales',
-      body: "La Table d'Antonio Salvatore au Rampoldi — restaurant gastronomique, 3 Avenue des Spélugues, 98000 Monaco. Éditeur : [NOM DE LA SOCIÉTÉ]. Directeur de la publication : [RESPONSABLE]. Contact : [EMAIL] · +377 93 30 70 44. Hébergement : GitHub Pages. Certains visuels sont générés par IA à des fins de présentation.",
+      body: "La Table du Chef — restaurant gastronomique, 5 Rue Jean Daumas, 06400 Cannes. Éditeur : [NOM DE LA SOCIÉTÉ]. Directeur de la publication : [RESPONSABLE]. Contact : [EMAIL] · +33 4 93 68 27 40. Hébergement : GitHub Pages. Certains visuels sont générés par IA à des fins de présentation.",
       close: 'Fermer',
     },
     menuOverlay: { label: 'Navigation', hint: 'La table vous attend.' },
@@ -177,9 +177,9 @@ export const t = {
   en: {
     nav: { home: 'Home', experience: 'The Experience', maison: 'The House', menu: 'The Menu', ambiance: 'Ambiance', reserve: 'Reserve', tables: 'The Tables' , maisons: 'Our Houses', boutique: 'The Boutique', events: 'Events', press: 'Press' },
     hero: {
-      kicker: 'Monaco — Riviera', title: 'MAISON LUMIÈRE', tagline: 'The art of hosting.',
-      sub: 'An exceptional address in Monaco.', cta: 'Reserve', scroll: 'Scroll to enter',
-      chips: ['Michelin-starred', 'Italian gastronomy', 'Monaco'],
+      kicker: 'Cannes — Riviera', title: 'MAISON LUMIÈRE', tagline: 'The art of hosting.',
+      sub: 'An exceptional address in Cannes.', cta: 'Reserve', scroll: 'Scroll to enter',
+      chips: ['French gastronomy', 'Michelin · Gault&Millau', 'Cannes'],
     },
     experience: {
       label: 'The Experience',
@@ -240,7 +240,7 @@ export const t = {
     },
     legal: {
       link: 'Legal notice', title: 'Legal notice',
-      body: "La Table d'Antonio Salvatore au Rampoldi — fine-dining restaurant, 3 Avenue des Spélugues, 98000 Monaco. Publisher: [COMPANY NAME]. Publication director: [MANAGER]. Contact: [EMAIL] · +377 93 30 70 44. Hosting: GitHub Pages. Some visuals are AI-generated for presentation purposes.",
+      body: "La Table du Chef — fine-dining restaurant, 5 Rue Jean Daumas, 06400 Cannes. Publisher: [COMPANY NAME]. Publication director: [MANAGER]. Contact: [EMAIL] · +33 4 93 68 27 40. Hosting: GitHub Pages. Some visuals are AI-generated for presentation purposes.",
       close: 'Close',
     },
     menuOverlay: { label: 'Navigation', hint: 'Your table awaits.' },
@@ -326,9 +326,9 @@ export const t = {
   it: {
     nav: { home: 'Home', experience: "L'Esperienza", maison: 'La Maison', menu: 'Il Menu', ambiance: 'Atmosfera', reserve: 'Prenotare', tables: 'I Tavoli' , maisons: 'Le Nostre Case', boutique: 'La Boutique', events: 'Eventi', press: 'Stampa' },
     hero: {
-      kicker: 'Monaco — Riviera', title: 'MAISON LUMIÈRE', tagline: "L'arte dell'accoglienza.",
-      sub: 'Un indirizzo d’eccezione a Monaco.', cta: 'Prenotare', scroll: 'Scorri per entrare',
-      chips: ['Stella Michelin', 'Alta cucina italiana', 'Monaco'],
+      kicker: 'Cannes — Riviera', title: 'MAISON LUMIÈRE', tagline: "L'arte dell'accoglienza.",
+      sub: 'Un indirizzo d’eccezione a Cannes.', cta: 'Prenotare', scroll: 'Scorri per entrare',
+      chips: ['Gastronomia francese', 'Michelin · Gault&Millau', 'Cannes'],
     },
     experience: {
       label: "L'Esperienza",
@@ -389,7 +389,7 @@ export const t = {
     },
     legal: {
       link: 'Note legali', title: 'Note legali',
-      body: "La Table d'Antonio Salvatore au Rampoldi — ristorante gastronomico, 3 Avenue des Spélugues, 98000 Monaco. Editore: [NOME SOCIETÀ]. Direttore della pubblicazione: [RESPONSABILE]. Contatto: [EMAIL] · +377 93 30 70 44. Hosting: GitHub Pages. Alcune immagini sono generate con IA a scopo di presentazione.",
+      body: "La Table du Chef — ristorante gastronomico, 5 Rue Jean Daumas, 06400 Cannes. Editore: [NOME SOCIETÀ]. Direttore della pubblicazione: [RESPONSABILE]. Contatto: [EMAIL] · +33 4 93 68 27 40. Hosting: GitHub Pages. Alcune immagini sono generate con IA a scopo di presentazione.",
       close: 'Chiudere',
     },
     menuOverlay: { label: 'Navigazione', hint: 'La tavola vi attende.' },
@@ -475,9 +475,9 @@ export const t = {
   ru: {
     nav: { home: 'Главная', experience: 'Опыт', maison: 'Дом', menu: 'Меню', ambiance: 'Атмосфера', reserve: 'Бронь', tables: 'Столы' , maisons: 'Наши дома', boutique: 'Бутик', events: 'События', press: 'Пресса' },
     hero: {
-      kicker: 'Монако — Ривьера', title: 'MAISON LUMIÈRE', tagline: 'Искусство гостеприимства.',
-      sub: 'Исключительный адрес в Монако.', cta: 'Забронировать', scroll: 'Листайте, чтобы войти',
-      chips: ['Звезда Мишлен', 'Итальянская гастрономия', 'Монако'],
+      kicker: 'Канны — Ривьера', title: 'MAISON LUMIÈRE', tagline: 'Искусство гостеприимства.',
+      sub: 'Исключительный адрес в Каннах.', cta: 'Забронировать', scroll: 'Листайте, чтобы войти',
+      chips: ['Французская гастрономия', 'Michelin · Gault&Millau', 'Канны'],
     },
     experience: {
       label: 'Опыт',
@@ -538,7 +538,7 @@ export const t = {
     },
     legal: {
       link: 'Правовая информация', title: 'Правовая информация',
-      body: "La Table d'Antonio Salvatore au Rampoldi — гастрономический ресторан, 3 Avenue des Spélugues, 98000 Monaco. Издатель: [НАЗВАНИЕ КОМПАНИИ]. Ответственный за публикацию: [ОТВЕТСТВЕННЫЙ]. Контакт: [EMAIL] · +377 93 30 70 44. Хостинг: GitHub Pages. Часть изображений создана ИИ в презентационных целях.",
+      body: "La Table du Chef — гастрономический ресторан, 5 Rue Jean Daumas, 06400 Cannes. Издатель: [НАЗВАНИЕ КОМПАНИИ]. Ответственный за публикацию: [ОТВЕТСТВЕННЫЙ]. Контакт: [EMAIL] · +33 4 93 68 27 40. Хостинг: GitHub Pages. Часть изображений создана ИИ в презентационных целях.",
       close: 'Закрыть',
     },
     menuOverlay: { label: 'Навигация', hint: 'Ваш стол ждёт.' },
@@ -624,9 +624,9 @@ export const t = {
   de: {
     nav: { home: 'Start', experience: 'Das Erlebnis', maison: 'Das Haus', menu: 'Die Karte', ambiance: 'Ambiente', reserve: 'Reservieren', tables: 'Die Tische' , maisons: 'Unsere Häuser', boutique: 'Die Boutique', events: 'Events', press: 'Presse' },
     hero: {
-      kicker: 'Monaco — Riviera', title: 'MAISON LUMIÈRE', tagline: 'Die Kunst des Empfangens.',
-      sub: 'Eine außergewöhnliche Adresse in Monaco.', cta: 'Reservieren', scroll: 'Scrollen Sie, um einzutreten',
-      chips: ['Michelin-Stern', 'Italienische Gastronomie', 'Monaco'],
+      kicker: 'Cannes — Riviera', title: 'MAISON LUMIÈRE', tagline: 'Die Kunst des Empfangens.',
+      sub: 'Eine außergewöhnliche Adresse in Cannes.', cta: 'Reservieren', scroll: 'Scrollen Sie, um einzutreten',
+      chips: ['Französische Gastronomie', 'Michelin · Gault&Millau', 'Cannes'],
     },
     experience: {
       label: 'Das Erlebnis',
@@ -687,7 +687,7 @@ export const t = {
     },
     legal: {
       link: 'Impressum', title: 'Impressum',
-      body: "La Table d'Antonio Salvatore au Rampoldi — Gourmetrestaurant, 3 Avenue des Spélugues, 98000 Monaco. Herausgeber: [FIRMENNAME]. Verantwortlich: [VERANTWORTLICHER]. Kontakt: [EMAIL] · +377 93 30 70 44. Hosting: GitHub Pages. Einige Bilder sind KI-generiert und dienen Präsentationszwecken.",
+      body: "La Table du Chef — Gourmetrestaurant, 5 Rue Jean Daumas, 06400 Cannes. Herausgeber: [FIRMENNAME]. Verantwortlich: [VERANTWORTLICHER]. Kontakt: [EMAIL] · +33 4 93 68 27 40. Hosting: GitHub Pages. Einige Bilder sind KI-generiert und dienen Präsentationszwecken.",
       close: 'Schließen',
     },
     menuOverlay: { label: 'Navigation', hint: 'Ihr Tisch erwartet Sie.' },
@@ -773,9 +773,9 @@ export const t = {
   es: {
     nav: { home: 'Inicio', experience: 'La Experiencia', maison: 'La Casa', menu: 'La Carta', ambiance: 'Ambiente', reserve: 'Reservar', tables: 'Las Mesas' , maisons: 'Nuestras Casas', boutique: 'La Boutique', events: 'Eventos', press: 'Prensa' },
     hero: {
-      kicker: 'Mónaco — Riviera', title: 'MAISON LUMIÈRE', tagline: 'El arte de recibir.',
-      sub: 'Una dirección excepcional en Mónaco.', cta: 'Reservar', scroll: 'Desplázate para entrar',
-      chips: ['Estrella Michelin', 'Gastronomía italiana', 'Mónaco'],
+      kicker: 'Cannes — Riviera', title: 'MAISON LUMIÈRE', tagline: 'El arte de recibir.',
+      sub: 'Una dirección excepcional en Cannes.', cta: 'Reservar', scroll: 'Desplázate para entrar',
+      chips: ['Gastronomía francesa', 'Michelin · Gault&Millau', 'Cannes'],
     },
     experience: {
       label: 'La Experiencia',
@@ -836,7 +836,7 @@ export const t = {
     },
     legal: {
       link: 'Aviso legal', title: 'Aviso legal',
-      body: "La Table d'Antonio Salvatore au Rampoldi — restaurante gastronómico, 3 Avenue des Spélugues, 98000 Monaco. Editor: [NOMBRE DE LA EMPRESA]. Director de publicación: [RESPONSABLE]. Contacto: [EMAIL] · +377 93 30 70 44. Alojamiento: GitHub Pages. Algunas imágenes están generadas por IA con fines de presentación.",
+      body: "La Table du Chef — restaurante gastronómico, 5 Rue Jean Daumas, 06400 Cannes. Editor: [NOMBRE DE LA EMPRESA]. Director de publicación: [RESPONSABLE]. Contacto: [EMAIL] · +33 4 93 68 27 40. Alojamiento: GitHub Pages. Algunas imágenes están generadas por IA con fines de presentación.",
       close: 'Cerrar',
     },
     menuOverlay: { label: 'Navegación', hint: 'Su mesa le espera.' },

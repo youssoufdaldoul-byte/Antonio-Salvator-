@@ -19,7 +19,7 @@ export default function Reservation({ tr, tableRequest = '' }) {
           <img
             className="reservation__img"
             src={asset('/images/terrace-night.webp')}
-            alt={`La terrasse de ${RESTAURANT.name}, la nuit, au-dessus du port de Monaco`}
+            alt={`La terrasse de ${RESTAURANT.name}, la nuit`}
             loading="lazy"
             onError={() => setImgOk(false)}
           />
